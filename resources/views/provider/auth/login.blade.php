@@ -158,7 +158,7 @@ select{
     font-size: 26px;
     margin-bottom: 40px;
     color: #353434;
-    letter-spacing: 2px;    
+    letter-spacing: 2px;
 }
 .w3_info h4 {
     display: inline-block;
@@ -181,7 +181,7 @@ color:#999 !important;
 color:#999 !important;
 letter-spacing:5px;
 }
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
 color:#999 !important;
 }
 
@@ -327,7 +327,7 @@ h5 {
     }
 }
 @media screen and (max-width: 900px){
-    
+
     .left_grid_info h4 {
         font-size: 1em;
     }
@@ -347,13 +347,13 @@ h5 {
     }
 }
 @media screen and (max-width: 768px){
-    
+
     .left_grid_info h3 {
         font-size: 1.6em;
     }
 }
 @media screen and (max-width: 736px){
-    
+
     .left_grid_info h3 {
         font-size: 1.7em;
     }
@@ -514,7 +514,7 @@ footer.style-5 .cps-footer-widget-area .cps-widget .cps-socials a:hover {
     color: #ffffff !important;
 }
 #togglePassword{
-     
+
 cursor: pointer;}
 </style>
 @endsection
@@ -533,7 +533,7 @@ cursor: pointer;}
                         <label>Mobile</label>
                         <div class="input-group">
                             <span><i class="fa fa-user" aria-hidden="true"></i></span>
-                            <input class="width" id="mobile" type="text" name="mobile" value="{{ old('mobile') }}" placeholder="Mobile" autofocus required="" autocomplete="off"> 
+                            <input class="width" id="mobile" type="text" name="mobile" value="{{ old('mobile') }}" placeholder="Mobile" autofocus required="" autocomplete="off">
                         </div>
                         @if ($errors->has('mobile'))
                             <span class="help-block">
@@ -558,13 +558,13 @@ cursor: pointer;}
                     </div>
                     <div class="clear"></div>
                     <div>
-                        <input type="checkbox" value="remember-me" /> <h4>Remember Password</h4> <h4 style="float: right;"><a href="{{ url('/provider/password/reset') }}">Forgot Your Password?</a></h4>       
+                        <input type="checkbox" value="remember-me" /> <h4>Remember Password</h4> <h4 style="float: right;"><a href="{{ url('/provider/password/reset') }}">Forgot Your Password?</a></h4>
                         <button class="btn btn-danger btn-block" type="submit">Login Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button >
-                    </div>                
+                    </div>
                 </form>
                  <div class="creatbox">
                 <a class="twitter-login" href="{{ url('/provider/register') }}"> CREATE NEW ACCOUNT</a>
-                
+
                 @if(Setting::get('social_login', 0) == 1)
                 <div class="text-center">
                     Or
@@ -574,12 +574,12 @@ cursor: pointer;}
                     <a class="facebook-login" href="{{ url('provider/auth/facebook') }}"><i class="fa fa-facebook"></i> Sign in via Facebook</a>
                 </div>
                 @endif
-                </div> 
+                </div>
         </div>
         <div class="w3l_form">
             <div class="left_grid_info">
-                <h3>{{ Setting::get('site_title','Unicotaxi') }} needs Partner Like You</h3>
-                <p>Drive with {{ Setting::get('site_title','Unicotaxi') }} and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.</p>
+                <h3>{{ Setting::get('site_title','Cabi') }} needs Partner Like You</h3>
+                <p>Drive with {{ Setting::get('site_title','Cabi') }} and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.</p>
             </div>
         </div>
         <div class="clear"></div>
@@ -597,7 +597,7 @@ cursor: pointer;}
             // toggle the type attribute
             const type = password.getAttribute("type") === "password" ? "text" : "password";
             password.setAttribute("type", type);
-            
+
             // toggle the icon
             this.classList.toggle("bi-eye");
         });
@@ -614,11 +614,11 @@ $(document).ready(function(){
             $("#custom_err .msg").show();
             return false;
         }
-    }); 
-    
+    });
+
        $('#second_step').hide();
         $('#first_step').show();
-        $("#mobile").val(''); 
+        $("#mobile").val('');
     var error = "{{ $errors->any()}}";
     if(error == 1)
     {
@@ -626,7 +626,7 @@ $(document).ready(function(){
         $('#first_step').hide();
     }
 
-       
+
 
         $('#sendopt').on('click',function(e){
         e.preventDefault();
@@ -643,7 +643,7 @@ $(document).ready(function(){
             $("#custom_err .msg").text('Please enter Phone number');
             return false;
         }
-        
+
         $.ajax({
             url: "{{url('/provider/sendotp/login')}}",
             type:'POST',
@@ -662,21 +662,21 @@ $(document).ready(function(){
                     $("#custom_err .msg").text(result.data);
                 }
             },
-            error:function(jqXhr,status) { 
+            error:function(jqXhr,status) {
                 if(jqXhr.status === 422) {
                     $("#custom_err").show();
                     var errors = jqXhr.responseJSON;
-                    $.each( errors , function( key, value ) { 
+                    $.each( errors , function( key, value ) {
                         $("#custom_err .msg").html(value);
-                    }); 
-                } 
+                    });
+                }
             }
 
         });
-       
-    });
 
     });
 
-    
+    });
+
+
 @endsection

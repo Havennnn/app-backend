@@ -2,8 +2,8 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-      <title>{{ config('app.name', 'Unicotaxi') }}</title>
-      
+      <title>{{ config('app.name', 'Cabi') }}</title>
+
    </head>
    <body marginwidth="0" marginheight="0" style="margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0; width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;" offset="0" topmargin="0" leftmargin="0">
       <table  width="70%" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ecf0f1" class="">
@@ -15,27 +15,27 @@
                         <tr>
                            <td height="40"></td>
                         </tr>
-                        <!--logo-->             
+                        <!--logo-->
                         <tr>
-                           <td align="center" style="line-height: 0px;">                     
+                           <td align="center" style="line-height: 0px;">
                               <img  style="display:block; font-size:0px; line-height:0px; border:0px;" src="{{ Setting::get('site_logo', asset('logo-black.png')) }}" width="213" height="70" alt="logo">                  </td>
                         </tr>
-                        <!--end logo-->               
+                        <!--end logo-->
                         <tr>
                            <td height="30"></td>
                         </tr>
-                        <!--slogan-->              
+                        <!--slogan-->
                         <tr>
                            <td align="center" valign="bottom" style="font-family: 'century Gothic', 'open sans', sans-serif; font-size:18px; color:#ffffff;line-height: 28px;">WELCOME</td>
                         </tr>
-                        <!--end slogan-->             
+                        <!--end slogan-->
                         <tr>
                            <td height="60"></td>
                         </tr>
                      </tbody>
                   </table>
                </td>
-            </tr>    
+            </tr>
             <tr>
                <td align="center">
                   <table align="center" class="table600" width="600" border="0" cellspacing="0" cellpadding="0">
@@ -67,29 +67,29 @@
                                           <table bgcolor="#f95759" width="20" border="0" align="right" cellpadding="0" cellspacing="0">
                                              <tbody>
                                                 <tr>
-                                                   <td style="line-height: 0px;">      
+                                                   <td style="line-height: 0px;">
                                                    </td>
                                                 </tr>
                                              </tbody>
                                           </table>
                                        </td>
                                     </tr>
-                                    <!--Title-->                        
+                                    <!--Title-->
                                     <tr>
-                                       <td align="left" valign="top" style="font-family: 'Open Sans', Arial, sans-serif; font-size:20px; color:#444444; font-weight:bold;">{{ config('app.name', 'Unicotaxi') }}</td>
+                                       <td align="left" valign="top" style="font-family: 'Open Sans', Arial, sans-serif; font-size:20px; color:#444444; font-weight:bold;">{{ config('app.name', 'Cabi') }}</td>
                                     </tr>
-                                    <!--end title-->                       
+                                    <!--end title-->
                                     <tr>
                                        <td style="border-bottom:1px solid #bdc3c7;" height="10"></td>
                                     </tr>
                                     <tr>
                                        <td height="10"></td>
                                     </tr>
-                                    <!--Content-->                      
+                                    <!--Content-->
                                     <tr>
-                                       <td align="left" style="font-family: 'Open Sans', Arial, sans-serif; font-size:13px; color:#3e4242; line-height:28px;"> 
-                                          <b>Hi,{{$UserRequest->name}}</b><br> 
-                                          
+                                       <td align="left" style="font-family: 'Open Sans', Arial, sans-serif; font-size:13px; color:#3e4242; line-height:28px;">
+                                          <b>Hi,{{$UserRequest->name}}</b><br>
+
                                           <b>Base Fare: </b>{{$UserRequest->base_fare}}<br>
                                           <b>Flat Fare: </b>{{$UserRequest->flat_fare}}<br>
                                           <b>Distance Fare: </b>{{$UserRequest->distance_fare}}<br>
@@ -102,10 +102,10 @@
                                           <b>Discount: </b>{{ $UserRequest->discount }}<br>
                                           <b>Total: </b>{{ $UserRequest->total }}<br>
                                           Thanks,<br>
-                                          {{ config('app.name', 'Unicotaxi') }} 
+                                          {{ config('app.name', 'Cabi') }}
                                           </td>
                                     </tr>
-                                    <!--End Content-->                        
+                                    <!--End Content-->
                                     <tr>
                                        <td height="25"></td>
                                     </tr>
@@ -136,7 +136,7 @@
             <tr>
                <td height="25"></td>
             </tr>
-            
+
             <tr>
                <td bgcolor="#444444" height="50" style="border-top:5px solid #57a7f9;">
                   <table class="table600" width="600" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -154,7 +154,7 @@
                                  <tbody>
                                     <tr>
                                        <td valign="middle" height="30" style="color: white;">Copyright © {{ config('app.name', 'Laravel') }} , All rights reserved</td>
-                           
+
                                     </tr>
                                  </tbody>
                               </table>

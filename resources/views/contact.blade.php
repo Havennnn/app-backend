@@ -16,7 +16,7 @@
                     <div class="col-md-8 col-md-offset-2 col-xs-12">
                         <div class="cps-section-header text-center">
                             <h3 class="cps-section-title">Get in Touch</h3>
-                            <p class="cps-section-text">Contacting us to make a reservation has never been easier. At {{ Setting::get('site_title','Unicotaxi') }}, you can now make reservation online or by phone. </p>
+                            <p class="cps-section-text">Contacting us to make a reservation has never been easier. At {{ Setting::get('site_title','Cabi') }}, you can now make reservation online or by phone. </p>
                         </div>
                     </div>
                 </div>
@@ -24,11 +24,11 @@
                     <div class="col-lg-6">
                         <form id="contactForm" class="cps-contact-form style-2" action="{{ url('/contactprocess') }}" method="post">
                             {{csrf_field()}}
-                            
+
                                     <input id="name" type="text" name="name" placeholder="Your Name">
                                     <input id="email" type="email" name="email" placeholder="Email">
                                     <input id="phone" type="tel" name="phone" placeholder="Phone">
-                               
+
                                     <textarea id="content" name="content" placeholder="Your Message Here"></textarea>
                                     <button type="submit">Send</button>
                             @if(Session::has('flash_success'))

@@ -43,7 +43,7 @@
 				<div class="form-group row">
 					<label for="site_title" class="col-xs-2 col-form-label">@lang('admin.member.site_name')</label>
 					<div class="col-xs-8">
-						<input class="form-control" type="text" value="{{ Setting::get('site_title', 'Unicotaxi')  }}" name="site_title" required id="site_title" placeholder="Site Name">
+						<input class="form-control" type="text" value="{{ Setting::get('site_title', 'Cabi')  }}" name="site_title" required id="site_title" placeholder="Site Name">
 					</div>
 				</div>
 
@@ -150,8 +150,8 @@
 							<option value="miles" @if(Setting::get('distance_unit') == 'miles') selected @endif>Miles</option>
 						</select>
 					</div>
-				</div>	
- -->				
+				</div>
+ -->
  				<div class="form-group row">
 					<label for="sos_number" class="col-xs-2 col-form-label">@lang('admin.member.sos_number')</label>
 					<div class="col-xs-8">
@@ -215,7 +215,7 @@
                         <input class="form-control" type="text" value="{{ Setting::get('payment_description','Total fare may change due in case of any route or destination changes of if your ride takes longer due to traffic or other factors')  }}" name="payment_description" id="payment_description" placeholder="payment description">
                     </div>
                 </div>
-                </div>		
+                </div>
                 				</div>
 
                 <div class="form-group row">
@@ -237,7 +237,7 @@
       				<div class="input-group-addon">
         				<a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
       				</div>
-    			</div>                        
+    			</div>
 		    </div>
                 </div>
                 <div class="form-group row">
@@ -255,18 +255,18 @@
                     <label for="tax_percentage" class="col-xs-2 col-form-label">Ios User Map Key</label>
                     <div class="col-xs-8">
 			<div class="input-group" id="show_hide_password4">
-      				<input class="form-control" type="password" value="{{ Setting::get('ios_user_map','AIzaSyBV1fZoyzTnxH_P5fbLvpe3oH7LZXc')  }}" name="ios_user_map" id="ios_user_map" placeholder="ios_user_map" disabled>      				
+      				<input class="form-control" type="password" value="{{ Setting::get('ios_user_map','AIzaSyBV1fZoyzTnxH_P5fbLvpe3oH7LZXc')  }}" name="ios_user_map" id="ios_user_map" placeholder="ios_user_map" disabled>
 				<div class="input-group-addon">
         				<a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
       				</div>
-    			</div>    
+    			</div>
                     </div>
                 </div>
                <input class="form-control" type="hidden" value="{{ Setting::get('address')  }}" name="address" id="address" >
                 <input class="form-control" type="hidden" value="{{ Setting::get('address_lat')  }}" name="address_lat" id="address_lat" >
                  <input class="form-control" type="hidden" value="{{ Setting::get('address_long')  }}" name="address_long" id="address_long" >
 
-               
+
                 <div class="form-group row">
                     <label for="tax_percentage" class="col-xs-2 col-form-label">Ios Driver Map Key</label>
                     <div class="col-xs-8">
@@ -319,8 +319,8 @@
 					</div>
 				</div>
 				@endif
-				
- -->				
+
+ -->
  				<div class="form-group row">
 					<label for="zipcode" class="col-xs-2 col-form-label"></label>
 					<div class="col-xs-8">

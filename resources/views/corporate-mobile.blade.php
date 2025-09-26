@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ Setting::get('site_title','Unicotaxi') }}</title>
+    <title>{{ Setting::get('site_title','Cabi') }}</title>
 
     <meta name="description" content="">
     <meta name="author" content="">
@@ -41,7 +41,7 @@
     <nav class="navbar navbar-default style-11 affix">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{{url('/')}}"><img src="{{Setting::get('site_logo')}}" alt="{{ Setting::get('site_title','Unicotaxi') }}" style="height: 65px;"></a>
+                <a class="navbar-brand" href="{{url('/')}}"><img src="{{Setting::get('site_logo')}}" alt="{{ Setting::get('site_title','Cabi') }}" style="height: 65px;"></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
             </div>
@@ -67,18 +67,18 @@
                             <div class="cps-section-header text-center">
                                 <form action="{{ route('guest.mobile') }}" method="post">
                                 {{csrf_field()}}
-                                    <div class="col-md-2">   
+                                    <div class="col-md-2">
                                         <select name="dial_code" class="form-control" id="dial_code">
                                             @foreach($countries as $country)
                                             <option value="{{ $country->dial_code }}">{{ $country->dial_code }}</option>
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-md-6">   
+                                    <div class="col-md-6">
                                         <input id="phone" class="form-control" type="text" name="phone" placeholder="Enter Your Mobile Number">
                                     </div>
                                     <input id="id_value"  type="hidden" name="id_value" value="{{ $id_value }}">
-                                    <div class="col-md-2"> 
+                                    <div class="col-md-2">
                                         <button type="submit" class="btn btn-primary">Send O T P</button>
                                     </div>
                                 </form>
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <!-- About us end -->
@@ -119,7 +119,7 @@
     <script src="{{asset('asset/theme/js/jquery.nav.js')}}"></script>
     <script src="{{asset('asset/theme/js/owl.carousel.js')}}"></script>
     <script src="{{asset('asset/theme/js/visible.js')}}"></script>
-    
+
     <script src="{{asset('asset/theme/js/jquery.countTo.js')}}"></script>
     <script src="{{asset('asset/theme/js/imagesloaded.pkgd.min.js')}}"></script>
     <script src="{{asset('asset/theme/js/isotope.pkgd.min.js')}}"></script>

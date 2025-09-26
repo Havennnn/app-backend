@@ -48,7 +48,7 @@
                 <h4 class="page-title">Demo</h4>
             </div>
             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                
+
                 <ol class="breadcrumb">
                     <li><a href="{{ route('admin.dashboard') }}">@lang('admin.dashboard')</a></li>
                     <li class="active">Demo credentials</li>
@@ -66,12 +66,12 @@
                      <p>We are delighted to have you as a member of our Application. If you have any questions please contact at <a href="mailto:{{ Setting::get('contact_email', 'info@unicotaxi.com') }}" style="color: rgb(42, 132, 166); text-decoration: none">{{ config('app.email', 'info@unicotaxi.com') }}</a></p><br>
 
                       <p><b>Admin  Login Details :</b></p>
-                      <p><b>Link:</b> <a href="https://demo.unicotaxi.com/admin/login">https://demo.unicotaxi.com/admin/login</a></p> 
+                      <p><b>Link:</b> <a href="https://demo.unicotaxi.com/admin/login">https://demo.unicotaxi.com/admin/login</a></p>
                       <p><b>Email:</b> {{ $demo->email }}</p>
                       <p><b>Password:</b> ​{{ $demo->password }}</p><br>
-                      
+
                       <p><b>Dispatcher Login Details :</b></p>
-                      <p><b>Link:</b> <a href="https://demo.unicotaxi.com/dispatcher/login">https://demo.unicotaxi.com/dispatcher/login</a></p> 
+                      <p><b>Link:</b> <a href="https://demo.unicotaxi.com/dispatcher/login">https://demo.unicotaxi.com/dispatcher/login</a></p>
                       <p><b>Email:</b> {{ $demo->email }}</p>
                       <p><b>Password:</b> ​{{ $demo->password }}</p><br>
 
@@ -116,8 +116,8 @@
                       <p><b>Date:</b> {{date("Y-m-d h:i A", strtotime($demo->created_at))}}</p><br>
 
                       <p>Thanks,</p>
-                      <p>{{ Setting::get('site_title', 'Unicotaxi') }} </p>
-                      
+                      <p>{{ Setting::get('site_title', 'Cabi') }} </p>
+
                     </div>
                 </div>
                 <div class="col-md-12">

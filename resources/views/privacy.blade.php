@@ -26,13 +26,13 @@
 </head>
 <body>
 	<div class="container">
-<img src="{{ Setting::get('site_logo','Unicotaxi') }}" width="160px">
+<img src="{{ Setting::get('site_logo','Cabi') }}" width="160px">
  <h2 style="font-size: 26px;color: #000000 !important;"><strong>PRIVACY POLICY</strong></h2>
- 
+
  <p>GoTaxi (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application (the “Application”).Please read this Privacy Policy carefully.  IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION. </p>
- 
+
 <p>We reserve the right to make changes to this Privacy Policy at any time and for any reason.  We will alert you about any changes by updating the “Last updated” date of this Privacy Policy.  You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Application after the date such revised Privacy Policy is posted.  </p>
- 
+
 <p>This Privacy Policy does not apply to the third-party online/mobile store from which you install the Application or make payments, including any in-game virtual items, which may also collect and use data about you.  We are not responsible for any of the data collected by any such third party. </p>
 
 <h3>COLLECTION OF YOUR INFORMATION</h3>
@@ -47,29 +47,29 @@
 <p><strong>Financial Data </strong></p>
 <p>Financial information, such as data related to your payment method (e.g. valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Application. [We store only very limited, if any, financial information that we collect. Otherwise, all financial information is stored by our payment processor and you are encouraged to review their privacy policy and contact them directly for responses to your questions.</p>
 
-<p><strong>Geo-Location Information</strong></p> 
+<p><strong>Geo-Location Information</strong></p>
 <p>We may request access or permission to and track location-based information from your mobile device, either continuously or while you are using the Application, to provide location-based services. If you wish to change our access or permissions, you may do so in your device’s settings.</p>
 
-<p><strong>Mobile Device Access </strong></p> 
+<p><strong>Mobile Device Access </strong></p>
 <p>We may request access or permission to certain features from your mobile device, including your mobile device’s [bluetooth, calendar, camera, contacts, microphone, reminders, sensors, SMS messages, social media accounts, storage,] and other features. If you wish to change our access or permissions, you may do so in your device’s settings.</p>
 
-<p><strong>Mobile Device Data </strong></p> 
+<p><strong>Mobile Device Data </strong></p>
 <p>Device information such as your mobile device ID number, model, and manufacturer, version of your operating system, phone number, country, location, and any other data you choose to provide.</p>
 
-<p><strong>Push Notifications</strong></p> 
+<p><strong>Push Notifications</strong></p>
 <p>We may request to send you push notifications regarding your account or the Application. If you wish to opt-out from receiving these types of communications, you may turn them off in your device’s settings.</p>
 
-<p><strong>Third-Party Data</strong></p> 
+<p><strong>Third-Party Data</strong></p>
 <p>Information from third parties, such as personal information or network friends, if you connect your account to the third party and grant the Application permission to access this information.</p>
 
-<p><strong>Data From Contests, Giveaways, and Surveys</strong></p>  
+<p><strong>Data From Contests, Giveaways, and Surveys</strong></p>
 <p>Personal and other information you may provide when entering contests or giveaways and/or responding to surveys.</p>
 
 <h3>USE OF YOUR INFORMATION</h3>
 <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience.  Specifically, we may use information collected about you via the Application to: </p>
 
 <p>1.	Assist law enforcement and respond to subpoena.</p>
-<p>2.	Compile anonymous statistical data and analysis for use internally or with third parties.</p> 
+<p>2.	Compile anonymous statistical data and analysis for use internally or with third parties.</p>
 <p>3.	Create and manage your account.</p>
 <p>4.	Deliver targeted advertising, coupons, newsletters, and other information regarding promotions and the Application to you. </p>
 <p>5.	Email you regarding your account or order.</p>
@@ -93,46 +93,46 @@
 <h3>DISCLOSURE OF YOUR INFORMATION</h3>
 <p>We may share information we have collected about you in certain situations. Your information may be disclosed as follows: </p>
 
-<p><strong>By Law or to Protect Rights </strong></p> 
+<p><strong>By Law or to Protect Rights </strong></p>
 <p>If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.  This includes exchanging information with other entities for fraud protection and credit risk reduction.</p>
 
 <p><strong>Third-Party Service Providers </strong></p>
-<p>We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.</p>  
+<p>We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.</p>
 
 <p><strong>Marketing Communications</strong></p>
 <p>With your consent, or with an opportunity for you to withdraw consent, we may share your information with third parties for marketing purposes, as permitted by law.</p>
 
-<p><strong>Interactions with Other Users</strong></p> 
+<p><strong>Interactions with Other Users</strong></p>
 <p>If you interact with other users of the Application, those users may see your name, profile photo, and descriptions of your activity, including sending invitations to other users, chatting with other users, liking posts, following blogs. </p>
 
 <p><strong>Online Postings</strong></p>
 <p>When you post comments, contributions or other content to the Applications, your posts may be viewed by all users and may be publicly distributed outside the Application in perpetuity</p>
 
 <p><strong>Third-Party Advertisers </strong></p>
-<p>We may use third-party advertising companies to serve ads when you visit the Application. These companies may use information about your visits to the Application and other websites that are contained in web cookies in order to provide advertisements about goods and services of interest to you.</p> 
+<p>We may use third-party advertising companies to serve ads when you visit the Application. These companies may use information about your visits to the Application and other websites that are contained in web cookies in order to provide advertisements about goods and services of interest to you.</p>
 
 <p><strong>Affiliates </strong></p>
 <p>We may share your information with our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include our parent company and any subsidiaries, joint venture partners or other companies that we control or that are under common control with us.</p>
 
-<p><strong>Business Partners</strong></p> 
-<p>We may share your information with our business partners to offer you certain products, services or promotions.</p> 
+<p><strong>Business Partners</strong></p>
+<p>We may share your information with our business partners to offer you certain products, services or promotions.</p>
 
-<p><strong>Offer Wall</strong></p>  
-<p>The Application may display a third-party-hosted “offer wall.”  Such an offer wall allows third-party advertisers to offer virtual currency, gifts, or other items to users in return for acceptance and completion of an advertisement offer.  Such an offer wall may appear in the Application and be displayed to you based on certain data, such as your geographic area or demographic information.  When you click on an offer wall, you will leave the Application.  A unique identifier, such as your user ID, will be shared with the offer wall provider in order to prevent fraud and properly credit your account.</p>  
+<p><strong>Offer Wall</strong></p>
+<p>The Application may display a third-party-hosted “offer wall.”  Such an offer wall allows third-party advertisers to offer virtual currency, gifts, or other items to users in return for acceptance and completion of an advertisement offer.  Such an offer wall may appear in the Application and be displayed to you based on certain data, such as your geographic area or demographic information.  When you click on an offer wall, you will leave the Application.  A unique identifier, such as your user ID, will be shared with the offer wall provider in order to prevent fraud and properly credit your account.</p>
 
-<p><strong>Social Media Contacts</strong></p>  
+<p><strong>Social Media Contacts</strong></p>
 <p>If you connect to the Application through a social network, your contacts on the social network will see your name, profile photo, and descriptions of your activity.</p>
 
 <p><strong>Other Third Parties</strong></p>
-<p>We may share your information with advertisers and investors for the purpose of conducting general business analysis. We may also share your information with such third parties for marketing purposes, as permitted by law.</p> 
+<p>We may share your information with advertisers and investors for the purpose of conducting general business analysis. We may also share your information with such third parties for marketing purposes, as permitted by law.</p>
 
-<p><strong>Sale or Bankruptcy</strong></p> 
-<p>If we reorganize or sell all or a portion of our assets, undergo a merger, or are acquired by another entity, we may transfer your information to the successor entity.  If we go out of business or enter bankruptcy, your information would be an asset transferred or acquired by a third party.  You acknowledge that such transfers may occur and that the transferee may decline honor commitments we made in this Privacy Policy.</p> 
+<p><strong>Sale or Bankruptcy</strong></p>
+<p>If we reorganize or sell all or a portion of our assets, undergo a merger, or are acquired by another entity, we may transfer your information to the successor entity.  If we go out of business or enter bankruptcy, your information would be an asset transferred or acquired by a third party.  You acknowledge that such transfers may occur and that the transferee may decline honor commitments we made in this Privacy Policy.</p>
 
 <p>We are not responsible for the actions of third parties with whom you share personal or sensitive data, and we have no authority to manage or control third-party solicitations.  If you no longer wish to receive correspondence, emails or other communications from third parties, you are responsible for contacting the third party directly.</p>
 
 <h3>TRACKING TECHNOLOGIES</h3>
-<p><strong>Cookies and Web Beacons</strong></p> 
+<p><strong>Cookies and Web Beacons</strong></p>
 <p>We may use cookies, web beacons, tracking pixels, and other tracking technologies on the Application to help customize the Application and improve your experience. When you access the Application, your personal information is not collected through the use of tracking technology. Most browsers are set to accept cookies by default. You can remove or reject cookies, but be aware that such action could affect the availability and functionality of the Application. You may not decline web beacons. However, they can be rendered ineffective by declining all cookies or by modifying your web browser’s settings to notify you each time a cookie is tendered, permitting you to accept or decline cookies on an individual basis.</p>
 
 <p><strong>Internet-Based Advertising</strong></p>
@@ -161,9 +161,9 @@
 <p>We use administrative, technical, and physical security measures to help protect your personal information.  While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.  Any information disclosed online is vulnerable to interception and misuse by unauthorized parties.  Therefore, we cannot guarantee complete security if you provide personal information.</p>
 
 <h3>POLICY FOR CHILDREN</h3>
-<p>We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below.</p> 
+<p>We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below.</p>
 
-<h3>CONTROLS FOR DO-NOT-TRACK FEATURES</h3>  
+<h3>CONTROLS FOR DO-NOT-TRACK FEATURES</h3>
 <p>Most web browsers and some mobile operating systems [and our mobile applications] include a Do-Not-Track (“DNT”) feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected.  No uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online.  If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Policy.</p>
 
 

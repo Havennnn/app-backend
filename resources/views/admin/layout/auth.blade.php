@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{ Setting::get('site_title', 'Unicotaxi') }}</title>
+  <title>{{ Setting::get('site_title', 'Cabi') }}</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="cache-control" content="no-cache" />
@@ -17,17 +17,17 @@
   <link rel="stylesheet" type="text/css" href="{{asset('main/logins2/css/main.css')}}">
 </head>
 <body style="background-color: #999999;">
-  
+
   <div class="limiter">
     <div class="container-login100">
       <div class="login100-more" style="background-image: url('{{asset('main/logins2/images/bg-01.jpg')}}');">
         <div class="p-l-50 p-r-20 p-t-250 p-b-20 left-sec">
           <h3 class="p-b-10">Kick-off Your Business <span class="green">With</span></h3>
-          <h2>{{ Setting::get('site_title', 'Unicotaxi') }}</h2>
+          <h2>{{ Setting::get('site_title', 'Cabi') }}</h2>
           <h3 class="p-t-50"><span class="green besmart">Be Smart</span> & Complete <br>Entrepreneur!!!</h3>
-        </div>    
+        </div>
       </div>
-      
+
       <div class="wrap-login100 p-l-50 p-r-20 p-t-20 p-b-20">
         <div>
         <img src="{{asset('asset/img/unico.png')}}" style="height:170px;" alt="Logo">
@@ -36,7 +36,7 @@
       </div>
     </div>
   </div>
-  
+
   <script src="{{asset('main/logins2/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
   <script src="{{asset('main/logins2/vendor/bootstrap/js/popper.js')}}"></script>
   <script src="{{asset('main/logins2/vendor/bootstrap/js/bootstrap.min.js')}}"></script>

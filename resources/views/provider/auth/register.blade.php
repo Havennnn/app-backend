@@ -163,7 +163,7 @@ select{
     font-size: 26px;
     margin-bottom: 40px;
     color: #353434;
-    letter-spacing: 2px;    
+    letter-spacing: 2px;
 }
 .w3_info h4 {
     display: inline-block;
@@ -186,7 +186,7 @@ color:#999 !important;
 color:#999 !important;
 letter-spacing:5px;
 }
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
 color:#999 !important;
 }
 
@@ -331,7 +331,7 @@ h5 {
     }
 }
 @media screen and (max-width: 900px){
-    
+
     .left_grid_info h4 {
         font-size: 1em;
     }
@@ -351,7 +351,7 @@ h5 {
     }
 }
 @media screen and (max-width: 768px){
-    
+
     .left_grid_info h3 {
         font-size: 1.6em;
     }
@@ -362,7 +362,7 @@ h5 {
     }
 }
 @media screen and (max-width: 736px){
-    
+
     .left_grid_info h3 {
         font-size: 1.7em;
     }
@@ -434,7 +434,7 @@ h5 {
     .left_grid_info p {
         font-size: 13px;
     }
-    
+
     .left_grid_info h3 {
         font-size: 1.4em;
     }
@@ -522,7 +522,7 @@ h5 {
                         <h2>Register Here</h2>
                                             @if($errors->any())
                                 <div id="alert_error" class="alert alert-danger" style="display: none;">
-                                    
+
                                     <ul>
                                     @foreach ($errors->all() as $error)
                                         <li>{{ $error }}</li>
@@ -550,7 +550,7 @@ h5 {
                             <div class="left" style="width: 33%;">
                         <div class="input-verify" id="mobile_verfication">
                             <button class="btn btn-verify btn-block"  id="sendopt" type="button">Send O T P</button>
-                        </div> 
+                        </div>
                     </div>
                         </div>
                         <div id="second_step" style="display: none;">
@@ -564,16 +564,16 @@ h5 {
                             <div class="left" style="width: 33%;">
                                 <div class="input-verify" id="mobile_verfication">
                                     <button class="btn btn-verify btn-block"  id="verifyotp" type="button">Verify O T P</button>
-                                </div> 
+                                </div>
                             </div>
                         </div>
                         <div id="third_step" style="display: none;">
-                           
+
                             <div>
                                 <label>Full Name</label>
                                 <div class="input-group">
                                     <span><i class="fa fa-user" aria-hidden="true"></i></span>
-                                    <input class="width" type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Full Name" autofocus required=""> 
+                                    <input class="width" type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Full Name" autofocus required="">
                                 </div>
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -585,7 +585,7 @@ h5 {
                                 <label>Email Address</label>
                                 <div class="input-group">
                                     <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                                    <input class="width" id="email" type="email" name="email" value="{{ old('email') }}" placeholder="E-Mail Address" required=""> 
+                                    <input class="width" id="email" type="email" name="email" value="{{ old('email') }}" placeholder="E-Mail Address" required="">
                                 </div>
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -595,7 +595,7 @@ h5 {
                             </div>
                                     <input class="width" id="password" type="hidden" name="password" value="123456" placeholder="Password" required="">
                                     <input class="width" id="password-confirm" type="hidden" name="password_confirmation" value="123456" placeholder="Confirm Password" required="">
-                               
+
                             <div>
                                 <label>Select Gender</label>
                                 <div class="input-group">
@@ -666,16 +666,16 @@ h5 {
                                 @endif
                             </div>
                             <div class="clear"></div>
-                    <div style="display: inline-block;">       
+                    <div style="display: inline-block;">
                         <button class="btn btn-danger btn-block" type="submit">Register Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button >
-                    </div>  
-                    </div>               
+                    </div>
+                    </div>
                 </form>
         </div>
         <div class="w3l_form">
             <div class="left_grid_info">
-                <h3>{{ Setting::get('site_title','Unicotaxi') }} needs Partner Like You</h3>
-                <p>Drive with {{ Setting::get('site_title','Unicotaxi') }} and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.</p>
+                <h3>{{ Setting::get('site_title','Cabi') }} needs Partner Like You</h3>
+                <p>Drive with {{ Setting::get('site_title','Cabi') }} and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.</p>
                 <a href="{{ url('/provider/login') }}" class="btn">Login <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
             </div>
         </div>
@@ -704,7 +704,7 @@ h5 {
                 }
             });
         </script>
-        
+
         <script>
         $(document).ready(function(){
             $('#changemobile').on('click', function(){
@@ -712,8 +712,8 @@ h5 {
                 $('#first_step').show();
                 $('#alert_error').hide();
                 $("#phone_number").val('');
-                
-            }); 
+
+            });
             var error = "{{ $errors->any()}}";
             if(error == 1)
             {
@@ -722,7 +722,7 @@ h5 {
                 $('#first_step').hide();
                 $('#third_step').show();
             }
-            
+
             $('#sendopt').on('click',function(e){
                 e.preventDefault();
                 var csrf = $("input[name='_token']").val();
@@ -738,7 +738,7 @@ h5 {
                     $("#custom_err .msg").text('Please enter Phone number');
                     return false;
                 }
-                
+
                 $.ajax({
                     url: "{{url('/provider/sendotp')}}",
                     type:'POST',
@@ -757,20 +757,20 @@ h5 {
                             $("#custom_err .msg").text(result.data);
                         }
                     },
-                    error:function(jqXhr,status) { 
+                    error:function(jqXhr,status) {
                         if(jqXhr.status === 422) {
                             $("#custom_err").show();
                             var errors = jqXhr.responseJSON;
-                            $.each( errors , function( key, value ) { 
+                            $.each( errors , function( key, value ) {
                                 $("#custom_err .msg").html(value);
-                            }); 
-                        } 
+                            });
+                        }
                     }
-        
+
                 });
-               
+
             });
-        
+
             $('#verifyotp').on('click',function(e){
                 e.preventDefault();
                 var csrf = $("input[name='_token']").val();
@@ -808,19 +808,19 @@ h5 {
                             $("#custom_err .msg").text(result.data);
                         }
                     },
-                    error:function(jqXhr,status) { 
+                    error:function(jqXhr,status) {
                         if(jqXhr.status === 422) {
                             $("#custom_err").show();
                             var errors = jqXhr.responseJSON;
-                            $.each( errors , function( key, value ) { 
+                            $.each( errors , function( key, value ) {
                                 $("#custom_err .msg").html(value);
-                            }); 
+                            });
                         }
                     }
-        
+
                 });
             });
-        
+
             $('#create_account').on('click',function(e){
                 e.preventDefault();
                 var csrf = $("input[name='_token']").val();
@@ -840,7 +840,7 @@ h5 {
                     $("#custom_err .msg").text('The password confirmation does not match.');
                     return false;
                 }
-               
+
                 $.ajax({
                     url: "{{url('/register')}}",
                     type:'POST',
@@ -849,18 +849,18 @@ h5 {
                         location.reload();
                     },
                     error:function(jqXhr,status) {
-                        console.log(jqXhr); 
+                        console.log(jqXhr);
                         console.log(status);
                         if(jqXhr.status === 422) {
                             $("#custom_err").show();
                             $("#custom_success").hide();
                             var errors = jqXhr.responseJSON;
-                            $.each( errors.errors , function( key, value ) { 
+                            $.each( errors.errors , function( key, value ) {
                                 $("#custom_err .msg").html(value[0]);
-                            }); 
+                            });
                         }
                     }
-        
+
                 });
             });
         });
@@ -869,10 +869,10 @@ h5 {
             function isNumberKey(evt)
             {
                 var charCode = (evt.which) ? evt.which : event.keyCode;
-                if (charCode != 46 && charCode > 31 
+                if (charCode != 46 && charCode > 31
                 && (charCode < 48 || charCode > 57))
                     return false;
-        
+
                 return true;
             }
         </script>

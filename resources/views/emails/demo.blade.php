@@ -2,8 +2,8 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-      <title>{{ config('app.name', 'Unicotaxi') }}</title>
-      <style> 
+      <title>{{ config('app.name', 'Cabi') }}</title>
+      <style>
 div.a {
   width: 40px;
   height: 40px;
@@ -29,30 +29,30 @@ div#myDiv {
                      <tbody>
                         <tr>
                            <td height="40" cellpadding="20">
-                              <img  style="display:block; font-size:0px; line-height:0px; border:0px; padding: 10px; padding-left: 20px;" src="{{ asset('asset/img/UnicoLogo.png') }}" width="200" height="60" alt="logo"> 
+                              <img  style="display:block; font-size:0px; line-height:0px; border:0px; padding: 10px; padding-left: 20px;" src="{{ asset('asset/img/UnicoLogo.png') }}" width="200" height="60" alt="logo">
                            </td>
                             <td height="40" width="0" cellpadding="20">
-                              
+
                            </td>
 
                            <td height="40" width="350" cellpadding="10" style="color: #fff; text-align: center; background-color: #000; font-size: 30px;">
                               <div><span>www.</span><span>unicotaxi.</span><span>com<span>
                               </div>
-                              
+
 
                            </td>
                            <td>
-                              
-                           </td>
-                        </tr>
-                        <!--logo-->             
-                        <tr>
-                           <td align="center" style="line-height: 0px;">    
 
-                                       
                            </td>
                         </tr>
-                        <!--end logo-->               
+                        <!--logo-->
+                        <tr>
+                           <td align="center" style="line-height: 0px;">
+
+
+                           </td>
+                        </tr>
+                        <!--end logo-->
                         <tr>
                            <td height="80" style=" padding: 20px;">
                               <br><br>
@@ -64,25 +64,25 @@ div#myDiv {
                               <!-- <div class="a"  style="margin-left: 45px;margin-top: -85px;"></div> -->
                            </td>
                         </tr>
-                        <!--slogan-->              
+                        <!--slogan-->
                         <tr>
-                           
+
                         </tr>
-                        <!--end slogan-->             
+                        <!--end slogan-->
                         <tr>
                            <td height="100"></td>
                         </tr>
                      </tbody>
                   </table>
                </td>
-            </tr>    
+            </tr>
             <tr>
                <td align="center">
                   <table align="center" class="table600" width="900" border="0" cellspacing="0" cellpadding="0">
                      <tbody>
                         <tr>
-                           <td align="center" valign="top" style="line-height: 0px;">                    
-				<img style="display:block; font-size:0px; line-height:0px; border:0px;" class="img1" src="{{ asset('/asset/img/email/bar-shadow-bottom.png') }}" width="598" height="5" alt="shadow">                 
+                           <td align="center" valign="top" style="line-height: 0px;">
+				<img style="display:block; font-size:0px; line-height:0px; border:0px;" class="img1" src="{{ asset('/asset/img/email/bar-shadow-bottom.png') }}" width="598" height="5" alt="shadow">
 			    </td>
                         </tr>
                      </tbody>
@@ -109,18 +109,18 @@ div#myDiv {
                                           <table bgcolor="#f95759" width="20" border="0" align="right" cellpadding="0" cellspacing="0">
                                              <tbody>
                                                 <tr>
-                                                   <td style="line-height: 0px;">      
+                                                   <td style="line-height: 0px;">
                                                    </td>
                                                 </tr>
                                              </tbody>
                                           </table>
                                        </td>
                                     </tr>
-                                    <!--Title-->                        
-                                   
-                                    <!--Content-->                      
+                                    <!--Title-->
+
+                                    <!--Content-->
                                     <tr>
-                                       <td align="left" style="font-family: 'Open Sans', Arial, sans-serif; font-size:13px; color:#3e4242; line-height:28px;"> 
+                                       <td align="left" style="font-family: 'Open Sans', Arial, sans-serif; font-size:13px; color:#3e4242; line-height:28px;">
                                           <b style="color: #2879d6; font-size: 20px;">Hi {{ $demo['name'] }},</b><br> <br>
                                          <p style="font-size: 18px;">We are delighted to have you as a member of our Application. If you have any questions please contact at <a href="mailto:sales@unicotaxi.com" style="color: #2879d6; text-decoration: none">sales@unicotaxi.com</a></p><br>
 
@@ -180,7 +180,7 @@ div#myDiv {
                                           </table>
 
                                              </div><br>
-                                          
+
 
                                          <center> <table style="border-collapse: collapse; font-size: 18px;">
                                              <tr>
@@ -221,7 +221,7 @@ div#myDiv {
                                                 </td>
                                              </tr>
                                           </table></div><br>
-                                         
+
 
                                          <center> <table style="border-collapse: collapse; font-size: 18px;">
                                              <tr>
@@ -264,7 +264,7 @@ div#myDiv {
                                           </table>
 
                                              </div><br>
-                                          
+
 
                                          <center> <table style="border-collapse: collapse; font-size: 18px;">
                                              <tr>
@@ -309,7 +309,7 @@ div#myDiv {
                                           </table>
 
                                              </div><br>
-                                          
+
 
                                          <center> <table style="border-collapse: collapse; font-size: 18px;">
                                              <tr>
@@ -350,7 +350,7 @@ div#myDiv {
                                                 </td>
                                              </tr>
                                           </table></div><br>
-                                         
+
 
                                          <center> <table style="border-collapse: collapse; font-size: 18px;">
                                              <tr>
@@ -395,7 +395,7 @@ div#myDiv {
                                              </tr>
                                           </table>
                                              </div><br>
-                                         
+
 
                                          <center> <table style="border-collapse: collapse; font-size: 18px;">
                                              <tr>
@@ -426,7 +426,7 @@ div#myDiv {
                                              </tr>
                                           </table></center><br>
 
-                                         
+
 
                                          <div style="background-color: #000; color: #fff; padding: 2px;">
 
@@ -441,7 +441,7 @@ div#myDiv {
                                              </tr>
                                           </table>
                                        </div><br>
-                                          
+
 
                                          <center> <table style="border-collapse: collapse; font-size: 18px;">
                                              <tr>
@@ -486,7 +486,7 @@ div#myDiv {
                                       </div><br>
 
 
-                                        
+
 
                                          <center> <table style="border-collapse: collapse; font-size: 18px;">
                                              <tr>
@@ -515,17 +515,17 @@ div#myDiv {
                                              </tr>
                                           </table></center><br> -->
 
-                                          
+
 <table align="center" width="85%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ecf0f1" class="" style="background: none;text-align: center; padding: 10px 0px;">
    <tr>
       <td style="font-weight: bold;padding-bottom: 5px; color: #2879d6;">Passenger App Link</td>
       <td style="font-weight: bold;padding-bottom: 5px; color: #2879d6;">Driver App Link</td>
    </tr>
    <tr>
-      <td><a target="_blank" href="https://play.google.com/store/apps/details?id=com.unicotaxi.passenger"><img src="https://demo.unicotaxi.com/asset/theme/images/googleplay.png" alt=""></a> 
+      <td><a target="_blank" href="https://play.google.com/store/apps/details?id=com.unicotaxi.passenger"><img src="https://demo.unicotaxi.com/asset/theme/images/googleplay.png" alt=""></a>
       <a target="_blank" href="https://apps.apple.com/in/app/unicotaxi/id1278867811"><img src="https://demo.unicotaxi.com/asset/theme/images/appstore.png" alt=""></a>
    </td>
-      <td><a target="_blank" href="https://play.google.com/store/apps/details?id=com.unicotaxi.driver"><img src="https://demo.unicotaxi.com/asset/theme/images/googleplay.png" alt=""></a> 
+      <td><a target="_blank" href="https://play.google.com/store/apps/details?id=com.unicotaxi.driver"><img src="https://demo.unicotaxi.com/asset/theme/images/googleplay.png" alt=""></a>
       <a target="_blank" href="https://apps.apple.com/in/app/unicotaxi-driver/id1278872544"><img src="https://demo.unicotaxi.com/asset/theme/images/appstore.png" alt=""></a></td>
    </tr>
 
@@ -533,7 +533,7 @@ div#myDiv {
       <td><a target="_blank" href="https://apps.apple.com/in/app/unicotaxi-plus/id1492438848"><img src="https://demo.unicotaxi.com/asset/theme/images/appstore.png" alt=""></a></td>
       <td><a target="_blank" href="https://apps.apple.com/in/app/unicotaxi-plus-driver/id1492438963"><img src="https://demo.unicotaxi.com/asset/theme/images/appstore.png" alt=""></a></td>
    </tr> -->
-</table> <br><br>                                           
+</table> <br><br>
 <span style="color: #2879d6; font-size: 22px;"><b>Kindly follow the below instructions:</b><br></span>
 <span style="font-size: 18px !important;">
 1.You will be able to download the apps from google playstore<br>
@@ -545,10 +545,10 @@ div#myDiv {
 7. Driver application should have a minimum 50% battery and good data internet connection using 3G and above internet connection.<br></span>
 
                                          <span style="color: #2879d6; font-size: 18px;"> Thanks,<br>
-                                          {{ Setting::get('site_title', 'Unicotaxi') }} </span>
+                                          {{ Setting::get('site_title', 'Cabi') }} </span>
                                           </td>
                                     </tr>
-                                    <!--End Content-->                        
+                                    <!--End Content-->
                                     <tr>
                                        <td height="25"></td>
                                     </tr>
@@ -579,7 +579,7 @@ div#myDiv {
             <tr>
                <td height="25"></td>
             </tr>
-            
+
             <tr>
                <td bgcolor="#444444" height="50" style="border-top:5px solid #57a7f9;">
                   <table class="table600" width="600" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -596,8 +596,8 @@ div#myDiv {
                               <table class="table-inner" width="60%" border="0" cellspacing="0" cellpadding="0">
                                  <tbody>
                                     <tr>
-                                       <td valign="middle" height="30" style="color: white;">Copyright © {{ config('app.name', 'Laravel') }} , All rights reserved</td>
-                           
+                                       <td valign="middle" height="30" style="color: white;">Copyright ï¿½ {{ config('app.name', 'Laravel') }} , All rights reserved</td>
+
                                     </tr>
                                  </tbody>
                               </table>

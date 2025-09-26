@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{{ Setting::get('site_title','Unicotaxi') }}</title>
+        <title>{{ Setting::get('site_title','Cabi') }}</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{asset('asset/userpanel/css/bootstrap.min.css')}}">
@@ -15,7 +15,7 @@
         <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
-        ]); ?>  
+        ]); ?>
         </script>
         @yield('styles')
 		<style>
@@ -60,7 +60,7 @@
                             </form>
                 </ul>
             </nav>
- 
+
             <!-- Site Overlay -->
             <div class="site-overlay"></div>
 
@@ -94,20 +94,20 @@
                                     document.getElementById('logout-form').submit();">@lang('user.profile.logout')</a>
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
-                                    </form>    
+                                    </form>
                           </div>
                         </div>
                     </div>
                     </div>
                 </header>
 
-                
+
 
                 @yield('content')
 
             </div>
             <script src="{{asset('asset/userpanel/js/jquery.min.js')}}"></script>
-            <script src="{{asset('asset/userpanel/js/bootstrap.min.js')}}"></script>   
+            <script src="{{asset('asset/userpanel/js/bootstrap.min.js')}}"></script>
             <script type="text/javascript" src="{{asset('asset/userpanel/js/slick.min.js')}}"></script>
             <script src="{{asset('asset/userpanel/js/offside.js')}}"></script>
 
@@ -115,7 +115,7 @@
                 var offsideMenu1 = offside( '#menu-1', {
 
                     slidingElementsSelector: '#container, #results',
-                    debug: true, 
+                    debug: true,
                     buttonsSelector: '.menu-btn-1, .menu-btn-1--close',
                     slidingSide: 'left',
                     beforeOpen: function(){},

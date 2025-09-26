@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ Setting::get('site_title','Unicotaxi') }}</title>
+    <title>{{ Setting::get('site_title','Cabi') }}</title>
 
     <meta name="description" content="">
     <meta name="author" content="">
@@ -46,7 +46,7 @@
     <nav class="navbar navbar-default style-11 affix">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{{url('/')}}"><img src="{{Setting::get('site_logo')}}" alt="{{ Setting::get('site_title','Unicotaxi') }}" style="height: 65px;"></a>
+                <a class="navbar-brand" href="{{url('/')}}"><img src="{{Setting::get('site_logo')}}" alt="{{ Setting::get('site_title','Cabi') }}" style="height: 65px;"></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
             </div>
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <!-- About us end -->
@@ -151,7 +151,7 @@
     <script src="{{asset('asset/theme/js/jquery.nav.js')}}"></script>
     <script src="{{asset('asset/theme/js/owl.carousel.js')}}"></script>
     <script src="{{asset('asset/theme/js/visible.js')}}"></script>
-    
+
     <script src="{{asset('asset/theme/js/jquery.countTo.js')}}"></script>
     <script src="{{asset('asset/theme/js/imagesloaded.pkgd.min.js')}}"></script>
     <script src="{{asset('asset/theme/js/isotope.pkgd.min.js')}}"></script>

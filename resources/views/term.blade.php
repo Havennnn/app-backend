@@ -26,9 +26,9 @@
 </head>
 <body>
 	<div class="container">
-<img src="{{ Setting::get('site_logo','Unicotaxi') }}" width="160px">
+<img src="{{ Setting::get('site_logo','Cabi') }}" width="160px">
  <h2 style="font-size: 26px;color: #000000 !important;"><strong>Application standard terms and conditions</strong></h2>
- 
+
 <h3>1. Introduction</h3>
 <p>These Application Standard Terms And Conditions (these “Terms” or these “Application Standard Terms And Conditions”) contained herein on this webpage, shall govern your use of this application, including all pages within this application (collectively referred to herein below as this “Application”). These Terms apply in full force and effect to your use of this Website and by using this Application, you expressly accept all terms and conditions contained herein in full. You must not use this Application, if you have any objection to any of these Application Standard Terms And Conditions.</p>
 <p>This Application is not for use by any minors (defined as those who are not at least 18 years of age), and you must not use this Application if you are a minor.</p>

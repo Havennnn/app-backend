@@ -28,8 +28,8 @@
                         <div class="content-block">
                             <div class="block-title">
                             <!-- <div><img src="{{asset('web/images/black_logo.png')}}" alt="" width="10%"></div> -->
-                                <p>Few words about  {{ Setting::get('site_title','Unicotaxi') }}</p>
-                                <h2>Welcome <br /> To {{ Setting::get('site_title','Unicotaxi') }}</h2> 
+                                <p>Few words about  {{ Setting::get('site_title','Cabi') }}</p>
+                                <h2>Welcome <br /> To {{ Setting::get('site_title','Cabi') }}</h2>
                             </div><!-- /.block-title text-center -->
                             <p>Depend on our company for reliable local and long-distance transportation. We offer low-cost travel to any location, as well as airport shuttle service to many nearby airports. Advanced reservations are welcomed and guaranteed, no matter the size of your group, so request a quote today for our quality transportation service.</p>
                             <a href="{{url('/book-taxi')}}" class="about-btn">Book a Taxi</a>
@@ -52,13 +52,13 @@
             </div><!-- /.container -->
         </section><!-- /.about-style-two -->
         <hr class="style-one" />
-        
+
         <section class="feature-style-one thm-black-bg">
             <img src="web/images/background/feature-bg-1-12.png" alt="Awesome Image" class="feature-bg" />
             <div class="container">
                 <div class="block-title text-center">
                 <!-- <div><img src="{{asset('asset/img/unico.png')}}" alt="" width="20%"></div> -->
-                    <p> {{ Setting::get('site_title','Unicotaxi') }} benefit list</p>
+                    <p> {{ Setting::get('site_title','Cabi') }} benefit list</p>
                     <h2 class="light">Why choose us</h2>
                 </div><!-- /.block-title text-center -->
                 <div class="row">
@@ -68,7 +68,7 @@
                                 <i class="conexi-icon-insurance"></i>
                             </div><!-- /.icon-block -->
                             <h3><a href="">Safety Guarantee</a></h3>
-                            <p>At {{ Setting::get('site_title','Unicotaxi') }}, we take your safety <br> seriously.<span id="dots4">...</span><span id="more4"> Our dedicated team of trained drivers, advanced technology, and rigorous safety protocols ensure that every ride with us is a secure and worry-free experience. From real-time GPS tracking to thorough driver background checks, we go the extra mile to provide you with the peace of mind you  deserve. Trust {{ Setting::get('site_title','Unicotaxi') }} for a safe journey every time."</span></p>
+                            <p>At {{ Setting::get('site_title','Cabi') }}, we take your safety <br> seriously.<span id="dots4">...</span><span id="more4"> Our dedicated team of trained drivers, advanced technology, and rigorous safety protocols ensure that every ride with us is a secure and worry-free experience. From real-time GPS tracking to thorough driver background checks, we go the extra mile to provide you with the peace of mind you  deserve. Trust {{ Setting::get('site_title','Cabi') }} for a safe journey every time."</span></p>
                                 <a onclick="myFunction4()" id="myBtn4" class="more-link">Read More</a>
                         </div><!-- /.single-feature-one -->
                     </div><!-- /.col-lg-4 -->
@@ -78,7 +78,7 @@
                                 <i class="conexi-icon-seatbelt"></i>
                             </div><!-- /.icon-block -->
                             <h3><a href="">DBS Cleared Drivers</a></h3>
-                            <p>Travel with Peace of Mind: DBS Cleared Drivers at Your Service!<span id="dots5">...</span><span id="more5">.At {{ Setting::get('site_title','Unicotaxi') }}, your safety is paramount. All our drivers undergo rigorous Disclosure and Barring Service (DBS) checks, ensuring that they have been thoroughly vetted for your security. Rest easy knowing that your ride is in the hands of trustworthy and cleared professionals. Choose {{ Setting::get('site_title','Unicotaxi') }} for a safe and reliable journey."</span></p>
+                            <p>Travel with Peace of Mind: DBS Cleared Drivers at Your Service!<span id="dots5">...</span><span id="more5">.At {{ Setting::get('site_title','Cabi') }}, your safety is paramount. All our drivers undergo rigorous Disclosure and Barring Service (DBS) checks, ensuring that they have been thoroughly vetted for your security. Rest easy knowing that your ride is in the hands of trustworthy and cleared professionals. Choose {{ Setting::get('site_title','Cabi') }} for a safe and reliable journey."</span></p>
                                 <a onclick="myFunction5()" id="myBtn5" class="more-link">Read More</a>
                         </div><!-- /.single-feature-one -->
                     </div><!-- /.col-lg-4 -->
@@ -88,7 +88,7 @@
                                 <i class="conexi-icon-consent"></i>
                             </div><!-- /.icon-block -->
                             <h3><a href="">Free Quotation</a></h3>
-                            <p>"Unlock Affordable Travel: Get Your Free Taxi Quotation Today!<span id="dots6">...</span><span id="more6">.Experience transparent pricing with {{ Setting::get('site_title','Unicotaxi') }}. Our commitment to fair and competitive rates means you'll always know what to expect. Simply provide your trip details, and we'll provide you with a free, no-obligation quotation. No hidden fees, no surprises – just straightforward pricing for your convenience. Start your journey with confidence, choose {{ Setting::get('site_title','Unicotaxi') }} for a hassle-free ride."</span></p>
+                            <p>"Unlock Affordable Travel: Get Your Free Taxi Quotation Today!<span id="dots6">...</span><span id="more6">.Experience transparent pricing with {{ Setting::get('site_title','Cabi') }}. Our commitment to fair and competitive rates means you'll always know what to expect. Simply provide your trip details, and we'll provide you with a free, no-obligation quotation. No hidden fees, no surprises – just straightforward pricing for your convenience. Start your journey with confidence, choose {{ Setting::get('site_title','Cabi') }} for a hassle-free ride."</span></p>
                                 <a onclick="myFunction6()" id="myBtn6" class="more-link">Read More</a>
                         </div><!-- /.single-feature-one -->
                     </div><!-- /.col-lg-4 -->
@@ -105,16 +105,16 @@
                                     <div class="image-block">
                                         <img src="{{asset('web/images/resources/history.png')}}" alt="history image">
                                     </div>
-                                </li><!-- /.image-block 
+                                </li><!-- /.image-block
                                 <li class="slide-item">
                                     <div class="image-block">
                                         <img src="web/images/resources/history-1-12.jpg" alt="history image">
-                                    </div> /.image-block 
+                                    </div> /.image-block
                                 </li>
                                 <li class="slide-item">
                                     <div class="image-block">
                                         <img src="web/images/resources/history-1-12.jpg" alt="history image">
-                                    </div> /.image-block 
+                                    </div> /.image-block
                                 </li>-->
                             </ul>
                            <!-- <div class="history-one-slider-btn">
@@ -127,13 +127,13 @@
                         <div class="content-block">
                             <div class="block-title">
                             <!-- <div><img src="{{asset('web/images/black_logo.png')}}" alt="" width="10%"></div> -->
-                                <p> {{ Setting::get('site_title','Unicotaxi') }} history</p>
+                                <p> {{ Setting::get('site_title','Cabi') }} history</p>
                                 <h2>How we reached <br> to this level</h2>
                             </div><!-- /.block-title -->
                             <div class="history-content history-content-one-pager">
                                 <a class="pager-item active" data-slide-index="1">
                                     <h3>2007</h3>
-                                    <p>"Climbing Heights: Our Taxi Industry Journey Unveiled.{{ Setting::get('site_title','Unicotaxi') }} didn't just arrive; we blazed a trail. Years of unwavering commitment, innovative thinking, and customer-centric focus have propelled us to the pinnacle of the taxi industry. By embracing cutting-edge technology, prioritizing passenger safety, and fostering a dedicated team, we've earned our place as a leader. From day one, our aim was clear: to redefine travel convenience and set new standards. Trust the journey, trust {{ Setting::get('site_title','Unicotaxi') }} – your partner in elevating transportation experiences."</p>
+                                    <p>"Climbing Heights: Our Taxi Industry Journey Unveiled.{{ Setting::get('site_title','Cabi') }} didn't just arrive; we blazed a trail. Years of unwavering commitment, innovative thinking, and customer-centric focus have propelled us to the pinnacle of the taxi industry. By embracing cutting-edge technology, prioritizing passenger safety, and fostering a dedicated team, we've earned our place as a leader. From day one, our aim was clear: to redefine travel convenience and set new standards. Trust the journey, trust {{ Setting::get('site_title','Cabi') }} – your partner in elevating transportation experiences."</p>
                                 </a>
                                 <!-- <a href="#" class="pager-item" data-slide-index="2">
                                     <h3>2009</h3>
@@ -165,7 +165,7 @@
                             </div><!-- /.image-block -->
                             <div class="text-block">
                             <h3><a href="#">Tap the app, get a ride</a></h3>
-                                <p>{{ Setting::get('site_title','Unicotaxi') }} is the smartest way to get around. One tap and a car comes directly to you<span id="dots">...</span><span id="more">. Your driver knows exactly where to go. And you can pay with either cash or card. Advanced reservations are welcomed and guaranteed, no matter the size of your group, so request a quote today for our quality transportation service.</span></p>
+                                <p>{{ Setting::get('site_title','Cabi') }} is the smartest way to get around. One tap and a car comes directly to you<span id="dots">...</span><span id="more">. Your driver knows exactly where to go. And you can pay with either cash or card. Advanced reservations are welcomed and guaranteed, no matter the size of your group, so request a quote today for our quality transportation service.</span></p>
                                 <a onclick="myFunction()" id="myBtn" class="more-link">Read More</a>
                             </div><!-- /.text-block -->
                         </div><!-- /.single-offer-one -->
@@ -178,7 +178,7 @@
                             </div><!-- /.image-block -->
                             <div class="text-block">
                             <h3><a href="#">Ready anywhere, anytime</a></h3>
-                                <p>Daily commute. Errand across town. Early morning flight. Lat<span id="dots2">...</span><span id="more2">e night drinks. Wherever you’re headed, count on {{ Setting::get('site_title','Unicotaxi') }} for a ride—no reservations needed. We charge low rates and drive clean and well-maintained vehicles, all to ensure a pleasant and affordable ride. When you're in need of prompt and dependable taxi service, count on us!</span></p>
+                                <p>Daily commute. Errand across town. Early morning flight. Lat<span id="dots2">...</span><span id="more2">e night drinks. Wherever you’re headed, count on {{ Setting::get('site_title','Cabi') }} for a ride—no reservations needed. We charge low rates and drive clean and well-maintained vehicles, all to ensure a pleasant and affordable ride. When you're in need of prompt and dependable taxi service, count on us!</span></p>
                                 <a onclick="myFunction2()" id="myBtn2" class="more-link">Read More</a>
                             </div><!-- /.text-block -->
                         </div><!-- /.single-offer-one -->
@@ -216,11 +216,11 @@ function myFunction() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }
@@ -233,11 +233,11 @@ function myFunction2() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }
@@ -250,11 +250,11 @@ function myFunction3() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }
@@ -268,11 +268,11 @@ function myFunction4() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }
@@ -286,11 +286,11 @@ function myFunction5() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }
@@ -304,11 +304,11 @@ function myFunction6() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }

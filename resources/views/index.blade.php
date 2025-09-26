@@ -101,13 +101,13 @@
                         <div class="row">
                             <div class="col-xs-12 text-center">
                                 <h1 class="cps-banner-title">Comfort <span>Transportation </span> <br> For your Business and Personal Requirements</h1>
-                                <p class="cps-banner-text">Get to your destination on time with speedy transportation from {{ Setting::get('site_title','Unicotaxi') }}, <br>we transport clients to any location, local or long distance</p>
+                                <p class="cps-banner-text">Get to your destination on time with speedy transportation from {{ Setting::get('site_title','Cabi') }}, <br>we transport clients to any location, local or long distance</p>
                                 <div class="cps-button-group">
                                     <a class="btn btn-primary" href="{{url('register')}}">Sign up - it's Free!</a>
-                                    <p class="sign-in-text">Already using {{ Setting::get('site_title','Unicotaxi') }} ? <a href="{{url('/login')}}">Sign in</a></p>
+                                    <p class="sign-in-text">Already using {{ Setting::get('site_title','Cabi') }} ? <a href="{{url('/login')}}">Sign in</a></p>
                                 </div>
 
-                                
+
     <form action="{{ url('/booktaxi') }}" method="post">
         {{csrf_field()}}
         <div class="booking-option" style="display: none">
@@ -118,7 +118,7 @@
                     </div>
                     <div class="col-md-10">
                         <ul class="nav nav-pills">
-                          @foreach($services as $service)  
+                          @foreach($services as $service)
                           <li class="nav-item">
                             <a class="nav-link active" href="#">
                                 <div class="img-nav"><img src="{{$service->image}}"></div>
@@ -130,7 +130,7 @@
                           </li>
                           @endforeach
                         </ul>
-                    </div> 
+                    </div>
                 </div>
                 <div class="col-md-12 padding-bottom border-bottom">
                     <div class="col-md-2">
@@ -143,7 +143,7 @@
                             <input type="checkbox" name="booster" id="booster" value="1"><label for="booster"><img src="{{asset('asset/img/child_seat.png')}}" style="width: 30px;">High chair for 9 months</label></div>
                         <div class="col-md-4">
                             <input type="checkbox" name="wagon" id="wagon" value="1"><label for="wagon"><img src="{{asset('asset/img/child_booster.png')}}" style="width: 35px;">Station wagon</label></div>
-                    </div> 
+                    </div>
                 </div>
                 <div class="col-md-12 ">
                     <div class="col-md-2">
@@ -154,11 +154,11 @@
                             <input type="checkbox" name="payment_mode" id="payment_mode" value="CASH"><label for="payment_mode"> Pay in Taxi</label></div>
                         <div class="col-md-4">
                             <input type="checkbox" name="fixed_price" id="fixed_price" value="1"><label for="fixed_price"> Fixed Price</label></div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
-      
+
                         </div>
                     </div>
                 </div>
@@ -240,13 +240,13 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 col-xs-12">
                         <div class="cps-section-header text-center">
-                            <h3 class="cps-section-title">{{ Setting::get('site_title','Unicotaxi') }} Mobile App</h3>
+                            <h3 class="cps-section-title">{{ Setting::get('site_title','Cabi') }} Mobile App</h3>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-12">
                         <div class="cps-section-header text-left">
                             <h3 class="cps-section-title">Tap the app, get a ride</h3>
-                            <p class="cps-section-text">{{ Setting::get('site_title','Unicotaxi') }} is the smartest way to get around. One tap and a car comes directly to you. Your driver knows exactly where to go. And you can pay with either cash or card. Advanced reservations are welcomed and guaranteed, no matter the size of your group, so request a quote today for our quality transportation service.</p>
+                            <p class="cps-section-text">{{ Setting::get('site_title','Cabi') }} is the smartest way to get around. One tap and a car comes directly to you. Your driver knows exactly where to go. And you can pay with either cash or card. Advanced reservations are welcomed and guaranteed, no matter the size of your group, so request a quote today for our quality transportation service.</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-12 text-center">
@@ -255,14 +255,14 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="cps-section cps-section-padding cps-bottom-0">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-12 col-sm-push-6">
                         <div class="cps-section-header text-left">
                             <h3 class="cps-section-title">Ready anywhere, anytime</h3>
-                            <p class="cps-section-text">Daily commute. Errand across town. Early morning flight. Late night drinks. Wherever you’re headed, count on {{ Setting::get('site_title','Unicotaxi') }} for a ride—no reservations needed. We charge low rates and drive clean and well-maintained vehicles, all to ensure a pleasant and affordable ride. When you're in need of prompt and dependable Transportation service, count on us!</p>
+                            <p class="cps-section-text">Daily commute. Errand across town. Early morning flight. Late night drinks. Wherever you’re headed, count on {{ Setting::get('site_title','Cabi') }} for a ride—no reservations needed. We charge low rates and drive clean and well-maintained vehicles, all to ensure a pleasant and affordable ride. When you're in need of prompt and dependable Transportation service, count on us!</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-12 col-sm-pull-6">
@@ -272,7 +272,7 @@
             </div>
         </div>
         <div class="row">
-        <div class="col-sm-6"> 
+        <div class="col-sm-6">
         <div class="cps-cta cps-gray-bg style-4" style="margin-left: 20px;">
             <!-- <div class="container text-center"> -->
                 <h3 class="cps-cta-title">Download  Passenger App </h3>
@@ -285,8 +285,8 @@
             <!-- <p>2023</p> -->
         </div>
         </div>
-      
-        <div class="col-sm-6"> 
+
+        <div class="col-sm-6">
         <div class="cps-cta cps-gray-bg style-4" style="margin-right: 20px; padding-bottom: 86px">
             <!-- <div class="container text-center"> -->
                 <h3 class="cps-cta-title">Download Driver  App </h3>
@@ -314,7 +314,7 @@
 @section('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript">
-    
+
     $(document).ready(function(){
         $('#schedule_at').val('{{ \Carbon\Carbon::now() }}');
     });
@@ -325,7 +325,7 @@
     });
 
     $(document).ready(function(){
-        $('#addition').on('click', function(event) {        
+        $('#addition').on('click', function(event) {
              $('.booking-option').toggle();
         });
 	$('.scheduleride').hide();
@@ -335,7 +335,7 @@
 			$('.scheduleride').show();
 		}else{
 			$('.scheduleride').hide();
-		}       
+		}
     	});
     });
 </script>

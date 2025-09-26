@@ -99,7 +99,7 @@
 .xdsoft_datetimepicker {
     border-radius:20px !important;
 }
-    
+
 
 </style>
 @endsection
@@ -114,11 +114,11 @@
                              <div class="col-lg-12 text-center">
                                 <div class="banner-circle mt-5" style="background-image: url(web/images/slider/slider-2-1.jpg);">
                                     <div class="inner-block mt-5">
-                                        <h3>Now enjoy <br> comfortable <br> trip with <br>  {{ Setting::get('site_title','Unicotaxi') }}</h3>
+                                        <h3>Now enjoy <br> comfortable <br> trip with <br>  {{ Setting::get('site_title','Cabi') }}</h3>
                                          <!-- <a href="#" class="banner-btn">Learn More</a>  -->
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                             <div class="col-lg-12 text-center">
                                 <div class="banner-circle mt-5" style="background-image: url(web/images/slider/slider-2-1.jpg);">
                                     <div class="inner-block mt-5">
-                                        <h3>Now enjoy <br> comfortable <br> trip with <br> {{ Setting::get('site_title','Unicotaxi') }}</h3>
+                                        <h3>Now enjoy <br> comfortable <br> trip with <br> {{ Setting::get('site_title','Cabi') }}</h3>
                                         <!-- <a href="#" class="banner-btn">Learn More</a> -->
                                     </div><!-- /.inner-block -->
                                 </div><!-- /.banner-circle -->
@@ -153,7 +153,7 @@
                         <p>We’re the best in your town</p>
                         <h2>Welcome to the <br> most trusted <br> company</h2>
                     </div><!-- /.block-title -->
-                    <p>Get to your destination on time with speedy transportation from {{ Setting::get('site_title','Unicotaxi') }},
+                    <p>Get to your destination on time with speedy transportation from {{ Setting::get('site_title','Cabi') }},
                     we transport clients to any location, local or long distance</p>
                     <hr class="style-one" />
                     <div class="tag-line">
@@ -221,11 +221,11 @@
                         text-indent: 1px;
                         text-overflow: '';">
                         <option value="">Please select</option>
-                            @foreach($services as $service) 
+                            @foreach($services as $service)
                                 <option value="{{ $service->id }}">{{ $service->name }}</option>
                             @endforeach
                         </select>
-                    </div> 
+                    </div>
                 </div>
 
                                 <div class="col-lg-12">
@@ -247,7 +247,7 @@
                                         <option value="Ride Now">Ride Now</option>
                                         <option value="Shedule Ride">Shedule Ride</option>
                                   </select>
-                               </div>   
+                               </div>
                              </div>
 
                                 <div class="col-lg-12">
@@ -305,7 +305,7 @@
         <section class="offer-style-one" style="background:#FFF;">
             <div class="container">
                 <div class="block-title text-center">
-                    <div><img src="{{asset('asset/img/unico.png')}}" alt="" width="10%"></div> 
+                    <div><img src="{{asset('asset/img/unico.png')}}" alt="" width="10%"></div>
                     <p>Check out our benefits</p>
                     <h2>What we’re offering</h2>
                 </div><!-- /.block-title -->
@@ -313,12 +313,12 @@
                     <div class="col-lg-4">
                         <div class="single-offer-one hvr-float-shadow">
                             <div class="image-block">
-                                <a href="#"><i class="fa fa-link"></i></a> 
+                                <a href="#"><i class="fa fa-link"></i></a>
                                 <img src="web/images/resources/offer-1-1.jpg" alt="Awesome Image" />
                             </div><!-- /.image-block -->
                             <div class="text-block">
                                 <h3><a href="#">Tap the app, get a ride</a></h3>
-                                <p>{{ Setting::get('site_title','Unicotaxi') }} is the smartest way to get around. One tap and a car comes directly to you<span id="dots">...</span><span id="more">. Your driver knows exactly where to go. And you can pay with either cash or card. Advanced reservations are welcomed and guaranteed, no matter the size of your group, so request a quote today for our quality transportation service.</span></p>
+                                <p>{{ Setting::get('site_title','Cabi') }} is the smartest way to get around. One tap and a car comes directly to you<span id="dots">...</span><span id="more">. Your driver knows exactly where to go. And you can pay with either cash or card. Advanced reservations are welcomed and guaranteed, no matter the size of your group, so request a quote today for our quality transportation service.</span></p>
                                 <a onclick="myFunction()" id="myBtn" class="more-link">Read More</a>
                             </div><!-- /.text-block -->
                         </div><!-- /.single-offer-one -->
@@ -331,7 +331,7 @@
                             </div><!-- /.image-block -->
                             <div class="text-block">
                                 <h3><a href="#">Ready anywhere, anytime</a></h3>
-                                <p>Daily commute. Errand across town. Early morning flight. Lat<span id="dots2">...</span><span id="more2">e night drinks. Wherever you’re headed, count on {{ Setting::get('site_title','Unicotaxi') }} for a ride—no reservations needed. We charge low rates and drive clean and well-maintained vehicles, all to ensure a pleasant and affordable ride. When you're in need of prompt and dependable taxi service, count on us!</span></p>
+                                <p>Daily commute. Errand across town. Early morning flight. Lat<span id="dots2">...</span><span id="more2">e night drinks. Wherever you’re headed, count on {{ Setting::get('site_title','Cabi') }} for a ride—no reservations needed. We charge low rates and drive clean and well-maintained vehicles, all to ensure a pleasant and affordable ride. When you're in need of prompt and dependable taxi service, count on us!</span></p>
                                 <a onclick="myFunction2()" id="myBtn2" class="more-link">Read More</a>
                             </div><!-- /.text-block -->
                         </div><!-- /.single-offer-one -->
@@ -366,7 +366,7 @@
                     <div class="col-lg-6">
                         <div class="content-block">
                             <div class="block-title">
-                                <div><img src="{{asset('asset/img/unico.png')}}" alt="" width="20%"></div> 
+                                <div><img src="{{asset('asset/img/unico.png')}}" alt="" width="20%"></div>
                                 <p>Book now from application</p>
                                 <h2>Get a Free Mobile Application</h2>
                             </div><!-- /.block-title -->
@@ -393,8 +393,8 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.cta-style-three -->
-      
-       
+
+
         <section class="cta-style-two no-zigzag">
             <div class="container">
                 <div class="content-block">
@@ -411,7 +411,7 @@
 @section('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript">
-    
+
     $(document).ready(function(){
         $('#schedule_time').val('{{ \Carbon\Carbon::now() }}');
     });
@@ -422,7 +422,7 @@
     });
 
     $(document).ready(function(){
-        $('#addition').on('click', function(event) {        
+        $('#addition').on('click', function(event) {
              $('.booking-option').toggle();
         });
 	$('.scheduleride').hide();
@@ -432,7 +432,7 @@
 			$('.scheduleride').show();
 		}else{
 			$('.scheduleride').hide();
-		}       
+		}
     	});
     });
 </script>
@@ -485,11 +485,11 @@ function myFunction() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }
@@ -502,11 +502,11 @@ function myFunction2() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }
@@ -519,11 +519,11 @@ function myFunction3() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "Read more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Read less";
     moreText.style.display = "inline";
   }
 }

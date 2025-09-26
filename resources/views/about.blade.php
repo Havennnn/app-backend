@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="cps-section-header text-center">
-                            <h3 class="cps-section-title">Welcome To {{ Setting::get('site_title','Unicotaxi') }}</h3>
+                            <h3 class="cps-section-title">Welcome To {{ Setting::get('site_title','Cabi') }}</h3>
                             <p class="cps-section-text">Depend on our company for reliable local and long-distance transportation. We offer low-cost travel to any location, as well as airport shuttle service to many nearby airports. Advanced reservations are welcomed and guaranteed, no matter the size of your group, so request a quote today for our quality transportation service.</p>
                         </div>
                     </div>

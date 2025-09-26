@@ -136,9 +136,9 @@
             <div class="block-title">
                 <!-- <div><img src="https://web.unicotaxi.com/web/images/black_logo.png" alt="" width="10%"></div> -->
                 <p>We’re the best in your town</p>
-                <h2>{{ Setting::get('site_title','Unicotaxi') }} needs Partner <br> Like You</h2>
+                <h2>{{ Setting::get('site_title','Cabi') }} needs Partner <br> Like You</h2>
             </div><!-- /.block-title -->
-            <p>Drive with {{ Setting::get('site_title','Unicotaxi') }} and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.</p>
+            <p>Drive with {{ Setting::get('site_title','Cabi') }} and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.</p>
             <!-- <hr class="style-one" />
             <div class="tag-line">
                 <span>Safe .</span>
@@ -197,7 +197,7 @@
                     <div class="left mt-3" id="second_step" style="display: none;">
                         <div class="input-holder">
                             <input class="width" id="password" type="text" name="password" placeholder="Enter OTP" autocomplete="off" />
-                          
+
                         </div>
 
                         @if ($errors->has('password'))
@@ -271,7 +271,7 @@ $('#sendotp').on('click',function(e){
         $("#custom_err .msg").text('Please enter Phone number');
         return false;
     }
-    
+
     $.ajax({
         url: "{{url('/provider/sendotp/login')}}",
         type:'POST',
@@ -285,17 +285,17 @@ $('#sendotp').on('click',function(e){
             $('#first_step').hide();
             }else{
                 $("#custom_err").show();
-                $("#custom_err .msg").text(result.data);        
+                $("#custom_err .msg").text(result.data);
             }
         },
-        error:function(jqXhr,status) { 
+        error:function(jqXhr,status) {
             if(jqXhr.status === 422) {
                 $("#custom_err").show();
                 var errors = jqXhr.responseJSON;
-                $.each( errors , function( key, value ) { 
+                $.each( errors , function( key, value ) {
                     $("#custom_err .msg").html(value);
-                }); 
-            } 
+                });
+            }
         }
 
     });
@@ -305,7 +305,7 @@ $('#sendotp').on('click',function(e){
 //     // alert("Hai");
 //     var csrf = $("input[name='_token']").val();
 //     var otp = $("#password").val();
-//     if(otp==''){ 
+//     if(otp==''){
 //         alert("Please enter O T P");
 //         $("#custom_success").hide();
 //         $("#custom_err").show();
@@ -336,13 +336,13 @@ $('#sendotp').on('click',function(e){
 //                 $("#custom_err .msg").text(result.data);
 //             }
 //         },
-//         error:function(jqXhr,status) { 
+//         error:function(jqXhr,status) {
 //             if(jqXhr.status === 422) {
 //                 $("#custom_err").show();
 //                 var errors = jqXhr.responseJSON;
-//                 $.each( errors , function( key, value ) { 
+//                 $.each( errors , function( key, value ) {
 //                     $("#custom_err .msg").html(value);
-//                 }); 
+//                 });
 //             }
 //         }
 

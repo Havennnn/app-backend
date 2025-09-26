@@ -224,7 +224,7 @@ button:hover{
                             <div class="widget-title">
                                 <h3>About</h3>
                             </div><!-- /.widget-title -->
-                            <p>{{ Setting::get('site_title','Unicotaxi') }} comprises superior and optimal in-app features that represent the relevance of taxi-booking mobile app.</p>
+                            <p>{{ Setting::get('site_title','Cabi') }} comprises superior and optimal in-app features that represent the relevance of taxi-booking mobile app.</p>
                             <div class="social-block">
                                 <a href="https://twitter.com/prontotaxi"><i class="fa fa-twitter"  ></i></a>
                                 <a href="https://www.facebook.com/prontotaxi/"><i class="fa fa-facebook-f"  ></i></a>
@@ -294,7 +294,7 @@ button:hover{
                 <div class="inner-container">
                     <div class="left-block">
                         <!-- <a href="{{url('/')}}" class="footer-logo"><img src="{{asset('web/images/ezgif.com-gif-maker (1).gif')}}" width="150px" height="65px" alt="Awesome Image" /></a> -->
-                        <span>&copy; 2023 <a href="{{url('/')}}">{{ Setting::get('site_title','Unicotaxi') }}</a></span>
+                        <span>&copy; 2023 <a href="{{url('/')}}">{{ Setting::get('site_title','Cabi') }}</a></span>
                     </div><!-- /.left-block -->
                     <div class="right-block">
                         <ul class="link-lists">

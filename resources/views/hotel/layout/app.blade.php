@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ Setting::get('site_title','Unicotaxi') }}</title>
+    <title>{{ Setting::get('site_title','Cabi') }}</title>
 
     <meta name="description" content="">
     <meta name="author" content="">
@@ -49,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('asset/img/unico.png')}}" alt="{{ Setting::get('site_title','Unicotaxi') }}" style="height: 65px;"></a>
+                <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('asset/img/unico.png')}}" alt="{{ Setting::get('site_title','Cabi') }}" style="height: 65px;"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -77,7 +77,7 @@
                                 <a class="cps-footer-logo" href="{{url('/')}}">
                                     <img src="{{Setting::get('site_logo')}}" alt="..." style="width: 142px;">
                                 </a>
-                                <p>{{ Setting::get('site_title','Unicotaxi') }} comprises superior and optimal in-app features that represent the relevance of taxi-booking mobile app.</p>
+                                <p>{{ Setting::get('site_title','Cabi') }} comprises superior and optimal in-app features that represent the relevance of taxi-booking mobile app.</p>
                                 <div class="cps-socials">
                                     <a href="https://www.facebook.com/Elite-Taxi-111413946861566/" target="_blank"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -128,7 +128,7 @@
     <script src="{{asset('asset/theme/js/jquery.nav.js')}}"></script>
     <script src="{{asset('asset/theme/js/owl.carousel.js')}}"></script>
     <script src="{{asset('asset/theme/js/visible.js')}}"></script>
-    
+
     <script src="{{asset('asset/theme/js/jquery.countTo.js')}}"></script>
     <script src="{{asset('asset/theme/js/imagesloaded.pkgd.min.js')}}"></script>
     <script src="{{asset('asset/theme/js/isotope.pkgd.min.js')}}"></script>
