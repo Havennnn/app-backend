@@ -1,7 +1,7 @@
  <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
- <style>   
+ <style>
      html,
         body,
         #map {
@@ -9,7 +9,7 @@
           margin: 0px;
           padding: 0px
         }
-        
+
         .map-control-button {
           height: 25px;
           width: 25px;
@@ -20,13 +20,13 @@
           cursor: pointer;
           display: inline-block;
         }
-        
+
         .custom-control-wrapper {
           margin-top: 8px;
         }
 </style>
 <div id="map"></div>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyA30-YQUNKSLkw69WCOzJBMHDDwH_X_QXY') }}&libraries=places" ></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" ></script>
 
 <script>
 var pathCoords = [{

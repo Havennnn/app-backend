@@ -25,7 +25,7 @@
             <form class="form-horizontal" action="{{route('admin.corporate.update', $corporate->id )}}" method="POST" enctype="multipart/form-data" role="form">
             	{{csrf_field()}}
             	<input type="hidden" name="_method" value="PATCH">
-				
+
 				<div class="form-group row">
 					<label for="legal_name" class="col-xs-12 col-form-label">Legal Name</label>
 					<div class="col-xs-8">
@@ -79,7 +79,7 @@
 						<input class="form-control" type="text" value="{{ $corporate->pan_no }}" name="pan_no" id="pan_no" placeholder="PAN number">
 					</div>
 				</div>
-				
+
 				<div class="form-group row">
 					<label for="country_id" class="col-xs-12 col-form-label">Country</label>
 					<div class="col-xs-8">
@@ -100,7 +100,7 @@
                         <input type="hidden" name="longitude" id="longitude">
                     </div>
                 </div>
-                
+
 				<div class="form-group row">
 					<label for="mobile" class="col-xs-12 col-form-label">@lang('admin.member.mobile')</label>
 					<div class="col-xs-8">
@@ -131,7 +131,7 @@
 
 @endsection
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 <script type="text/javascript">
   function initMap() {
 

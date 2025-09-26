@@ -17,7 +17,7 @@
 @endsection
 
 @section('content')
-    
+
     @if (count($errors) > 0)
         <div class="alert alert-danger">
             <button type="button" class="close" data-dismiss="alert">×</button>
@@ -28,7 +28,7 @@
             </ul>
         </div>
     @endif
-    
+
     @if(Session::has('flash_error'))
         <div class="alert alert-danger">
             <button type="button" class="close" data-dismiss="alert">×</button>
@@ -46,7 +46,7 @@
 
     <div class="row no-margin">
         <div class="col-md-12">
-            <h4 class="page-title">@lang('user.profile.edit_information')</h4> 
+            <h4 class="page-title">@lang('user.profile.edit_information')</h4>
         </div>
     </div>
     <hr>
@@ -58,10 +58,10 @@
                 <div class="img_outer">
                     <img class="profile_preview" id="profile_image_preview" src="{{img(Auth::guard('hotel')->user()->picture)}}" alt="your image" style="width: 120px;" />
                 </div>
-                <div class="fileUpload up-btn profile-up-btn">                   
+                <div class="fileUpload up-btn profile-up-btn">
                     <input type="file" id="profile_img_upload_btn" name="picture" class="upload" accept="image/x-png, image/jpeg"/>
-                </div>                             
-            </div> 
+                </div>
+            </div>
         </div>
         <div class="form-group">
             <label class="col-md-4">@lang('user.profile.name')</label>
@@ -111,7 +111,7 @@
 @endsection
 
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 <script type="text/javascript">
   function initMap() {
 
@@ -120,7 +120,7 @@
     var originLongitude = document.getElementById('longitude');
     var originAutocomplete = new google.maps.places.Autocomplete(
             originInput);
-    
+
     originAutocomplete.addListener('place_changed', function(event) {
         var place = originAutocomplete.getPlace();
         if (place.hasOwnProperty('place_id')) {

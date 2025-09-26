@@ -6,7 +6,7 @@
 <div class="content-area py-1" id="trip-panel">
     <div class="container-fluid">
         <div class="box box-block bg-white">
-            <div class="row filterbox"> 
+            <div class="row filterbox">
 
 	    <div class="form-group col-md-2">
             <select id="tripstatus" onchange="updates()" class="form-control" style="border-color:green;">
@@ -73,7 +73,7 @@
                     </tr>
                 </thead>
                 <tbody id="screen">
-    
+
                 </tbody>
                 <tfoot>
                     <tr>
@@ -95,7 +95,7 @@
                     </tr>
                 </tfoot>
             </table>
-    
+
       </div>
     </div>
 </div>
@@ -113,7 +113,7 @@
 
       </div>
       <div class="modal-footer">
-        
+
       </div>
     </div>
 </div>
@@ -173,11 +173,11 @@
             <table class="table first">
                 <tr>
                     <td>@lang('admin.triplist.passenger_name')</td>
-                    <td id="name"></td>  
+                    <td id="name"></td>
                 </tr>
                 <tr>
                      <td>@lang('admin.triplist.driver_name')</td>
-                     <td id="drivername"></td> 
+                     <td id="drivername"></td>
                 </tr>
                 <tr>
                     <td>@lang('admin.triplist.pickup_time')</td>
@@ -231,31 +231,31 @@
                     <td>Total fare</td>
                      <td id="total_fare"></td>
                 </tr>
-                
+
             </table>
             </div>
             <div class="col-md-6">
             <table class="table second">
                 <tr>
-                    <td><b>@lang('admin.triplist.pickup_location'):</b> <br><span id="pickup"></span></td>  
+                    <td><b>@lang('admin.triplist.pickup_location'):</b> <br><span id="pickup"></span></td>
                 </tr>
                 <tr>
-                     <td><b>Stop1 Location:</b><br><span id="stop1"></span></td> 
+                     <td><b>Stop1 Location:</b><br><span id="stop1"></span></td>
                 </tr>
                 <tr>
-                     <td><b>Stop2 Location:</b><br><span id="stop2"></span></td> 
+                     <td><b>Stop2 Location:</b><br><span id="stop2"></span></td>
                 </tr>
                 <tr>
-                     <td><b>@lang('admin.triplist.drop_location'):</b><br><span id="drop"></span></td> 
+                     <td><b>@lang('admin.triplist.drop_location'):</b><br><span id="drop"></span></td>
                 </tr>
                 <tr>
-                     <td><b>Onboard waiting Time:</b><br><span id="waiting_time"></span></td> 
+                     <td><b>Onboard waiting Time:</b><br><span id="waiting_time"></span></td>
                 </tr>
                 <tr>
-                     <td><b>Stops waiting Time:</b><br><span id="stop_waiting_time"></span></td> 
+                     <td><b>Stops waiting Time:</b><br><span id="stop_waiting_time"></span></td>
                 </tr>
 		<tr>
-                     <td><b>User notes for driver :</b><br><span id="user_notes"></span></td> 
+                     <td><b>User notes for driver :</b><br><span id="user_notes"></span></td>
                 </tr>
             </table>
             </div>
@@ -398,12 +398,12 @@
 		if($('.sidebar-mini:visible').length)
 			$('.large-sidebar').removeClass('sidebar-mini');
   		else
-        		$('.large-sidebar').addClass('sidebar-mini');        
+        		$('.large-sidebar').addClass('sidebar-mini');
 	});
 </script>
 
 <script type="text/javascript">
-    
+
     var maxdate = {!! json_encode( \Carbon\Carbon::today()->format('Y-m-d\TH:i') ) !!}
     var current_time = {!! json_encode( \Carbon\Carbon::now()->format('Y-m-d H:i:s') ) !!}
    /* $("#fromdate").flatpickr({
@@ -437,12 +437,12 @@
         $(document).on('click','#dispatch', function() {
             $("#getcode").empty();
             var latitude = $(this).attr("data-latitude");
-            var longitude = $(this).attr("data-longitude"); 
+            var longitude = $(this).attr("data-longitude");
             var service = $(this).attr("data-service");
             var id = $(this).attr("data-id");
             var current =$(this).attr("data-current");
             // if(current == 0){
-            $.get('/partner/providers', { 
+            $.get('/partner/providers', {
                 latitude: latitude,
                 longitude: longitude,
                 service_type: service,
@@ -461,10 +461,10 @@
             });
 
             // }else{
-            //    $("#getcode").append("<tr><td>@lang('admin.triplist.request_already_assigned')</td></tr>"); 
+            //    $("#getcode").append("<tr><td>@lang('admin.triplist.request_already_assigned')</td></tr>");
             // }
             $("#myModal").modal("toggle");
-        });  
+        });
 </script>
 <script>
 function updates(){
@@ -511,11 +511,11 @@ $(document).on('click','#showmap', function() {
                 }, function(result) {
                    console.log(result);
 
-        
-                  
+
+
         var map;
         var zoomLevel = 11;
-        
+
         map = new google.maps.Map(document.getElementById('map'));
 
         var marker = new google.maps.Marker({
@@ -560,7 +560,7 @@ $(document).on('click','#showmap', function() {
         bounds.extend(markerSecond.getPosition());
         map.fitBounds(bounds);
 
-        $('#name').text(result.user_name); 
+        $('#name').text(result.user_name);
         if(result.provider !=null){
             $('#drivername').text(result.provider['name']);
         }else{
@@ -594,7 +594,7 @@ $(document).on('click','#showmap', function() {
             $('#toll_fare').text('null');
             $('#extra_fare').text('null');
             $('#tax').text('null');
-        }     
+        }
         $('#pickup').text(result.s_address);
         $('#stop1').text(result.stop1_address);
         $('#stop2').text(result.stop2_address);
@@ -613,12 +613,12 @@ $(document).on('click','#showmap', function() {
         $('#comment').val(result.comment);
         $('#request_id').val(result.id);
         });
-        
-        
-});    
+
+
+});
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 
 <script>
     $(document).on('click','#editmodal', function() {
@@ -645,9 +645,9 @@ $(document).on('click','#showmap', function() {
  $(document).on('click','#autotrip', function() {
         var id = $(this).attr("data-id");
            $.get('/partner/autotrip/' + id, function( data ){
-                
+
            });
-           
+
     });
 </script>
 <script>
@@ -674,7 +674,7 @@ $(document).on('click','#showmap', function() {
                }
             },
         });
-        stay.preventDefault(); 
+        stay.preventDefault();
     });
 </script>
 @endsection

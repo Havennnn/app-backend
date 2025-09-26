@@ -634,10 +634,10 @@
 <link rel="stylesheet" href="{{asset('main/ZebraDatetimePicker/css/default/zebra_datepicker.min.css')}}" type="text/css">
 <link rel="stylesheet" href="{{asset('main/vendor/toastr/toastr.min.css')}}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" 
-   href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
-   integrity="sha384- 
-   B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
+<link rel="stylesheet"
+   href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+   integrity="sha384-
+   B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
    crossorigin="anonymous">
 @endsection
 @section('content')
@@ -847,7 +847,7 @@
          <option value="station_wagon">Station wagon</option>
          <option value="booster_seat">Booster seat</option>
          </select>
-         
+
          <select class="form-control filter-box" id="driver_status" onchange="driver_updates()">
          <option value="">All Status</option>
          <option value="active">Active</option>
@@ -906,7 +906,7 @@
 </div>
 @endsection
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" ></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" ></script>
 <script type="text/javascript" src="{{asset('main/assets/js/markerwithlabel.js')}}"></script>
 <script type="text/javascript" src="{{asset('main/assets/js/infobox.js')}}"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -931,8 +931,8 @@
    direction: [window.vx.minDate, window.vx.maxDate],
    });
    $('.Zebra_DatePicker_Icon_Wrapper').removeAttr('style');
-   
-   
+
+
    $('#add_cate').click(function(){
        $('#drop_pane').slideToggle("fast");
    });
@@ -979,7 +979,7 @@
        $('#fare_calc').text('');
        worldMapInitialize();
    });
-   
+
 </script>
 <script>
    $( "#first_name" ).autocomplete({
@@ -1035,14 +1035,14 @@
            $('.first_name').hide();
        }
       // alert($('#corporate_id').val());
-   
+
        if($('#email').val() == ''){
            $('.email').show();
            require = 1;
        }else{
            $('.email').hide();
        }
-   
+
        if($('#mobile').val() == ''){
            $('.mobile').show();
            require = 1;
@@ -1062,7 +1062,7 @@
            $('.d_address').hide();
        }
        if($("#provider_auto_assign").prop("checked") == false){
-   $("#provider_auto_assign").val('false');         
+   $("#provider_auto_assign").val('false');
        }else{
            $("#provider_auto_assign").val('true');
        }
@@ -1079,7 +1079,7 @@
            success: function(data) {
              if(data.success ==1){
                $('#clear').trigger("click");
-               $('.alert-success').show().delay(5000).fadeOut(); 
+               $('.alert-success').show().delay(5000).fadeOut();
               $("#message-success").append(data.message);
                            activeTab('tab-1');
               $("#myModal .close").trigger("click");
@@ -1090,10 +1090,10 @@
               var longitude = $("#d_address").val();
                // var service = $('#service_type').val();
                // alert(service);
-              var id = data.id; 
+              var id = data.id;
               var current = data.current;
-   
-                $.get('providers', { 
+
+                $.get('providers', {
                     //latitude: 11.02974830,
                     //longitude: 76.94634310,
                     service_type: service,
@@ -1110,7 +1110,7 @@
                           $("#getcode").append("<tr><td>@lang('admin.triplist.no_drivers_found')</td></tr>");
                       }
                 });
-   
+
             $("#AutoAssignModal").modal("toggle");
             $("div").removeClass("modal-backdrop");
             }
@@ -1123,7 +1123,7 @@
              }
    $("#create_trip").trigger("reset");
              /*location.reload();*/
-   
+
            }
        });
    });
@@ -1138,14 +1138,14 @@
        }else{
            $('.corporate_id').hide();
        }
-       
+
        if($('#c_count').val() == ''){
            $('.c_count').show();
            require = 1;
        }else{
            $('.c_count').hide();
        }
-   
+
        if($('#c_address').val() == ''){
            $('.c_address').show();
            require = 1;
@@ -1181,7 +1181,7 @@
            }
        });
    });
-   
+
    $('#service_type').on('change', function() {
        fare_calculation();
    });
@@ -1213,7 +1213,7 @@
            });
        }
    }
-   
+
    function c_fare_calculation(){
        var c_val = $('#c_service_type').val();
        var c_latitude1 = $('#c_latitude').val();
@@ -1239,14 +1239,14 @@
            });
        }
    }
-   
+
    $(document).on('click','#trips', function() {
        $('.alert').hide();
        var id = $(this).attr("data-id");
            activeTab('tab-4');
            viewer(id);
        });
-   
+
    function viewer(id){
        $("#loader").show();
        $("#viewer").empty();
@@ -1270,7 +1270,7 @@
      var data_driverString = "status="+status+"&driver_category="+driver_category+"&seat_count="+seat_count;
      var choose_corporate = $('#choose_corporate').val();
      var choose_service = $('#choose_service').val();
-   
+
        $.ajax
            ({
              cache: false,
@@ -1280,7 +1280,7 @@
              url: "/corporate/dispatch/driver-list",
              success: function(data)
              {
-               
+
                 $('.driver_list').html(data);
              }
            });
@@ -1336,7 +1336,7 @@
        setInterval(function(){
            driver_movement();
        }, 30000);
-   });   
+   });
    </script>
    --><script>
    var map;
@@ -1367,7 +1367,7 @@
    var s_latitude, s_longitude;
    var d_latitude, d_longitude;
    var stop1_latitude, stop1_longitude;
-   var stop2_latitude, stop2_longitude;  
+   var stop2_latitude, stop2_longitude;
      var distance;
      var seconds;
    var infoDefault = [];
@@ -1375,7 +1375,7 @@
    var interval;
    var worldinterval;
    var checker =0;
-   
+
    function worldMapInitialize() {
        clearInterval(interval);
        clearInterval(worldinterval);
@@ -1388,11 +1388,11 @@
            infoDefault[i].close();
        }
        infoDefault.length = 0;
-   
+
        latitude = parseFloat("{{ Auth::guard('corporate')->user()->latitude }}");
        longitude = parseFloat("{{ Auth::guard('corporate')->user()->longitude }}");
        zooming = parseInt("{{ Auth::guard('corporate')->user()->zoom }}");
-           
+
        map = new google.maps.Map(document.getElementById('map'), {
            center: {lat: latitude, lng: longitude},
            zoom: zooming,
@@ -1406,32 +1406,32 @@
              zoomControlOptions: {
                style: google.maps.ZoomControlStyle.SMALL,
                position: google.maps.ControlPosition.BOTTOM_RIGHT
-             }                 
+             }
        });
        ajaxMapData();
      interval = setInterval(ajaxMapData, 5000);
-   
+
        var mapelement = document.getElementById('map');
-   
+
        // var legend = document.createElement('div');
        // legend.setAttribute("id", "legend");
        // mapelement.append(legend);
-   
+
        // var div = document.createElement('div');
-       // div.className = ""; 
+       // div.className = "";
        // div.innerHTML = '<button class="btn-warning"><img src="' + mapIcons['person'] + '"> ' + '   Person ' + ' <input type="checkbox" name="filter_list" value="person"></button><button class="btn-success" style="margin-left:2px;"><img src="' + mapIcons['active'] + '"> ' + 'Acitve' + ' <input type="checkbox" name="filter_list" value="active">';
        // legend.appendChild(div);
-   
-       
+
+
        // var div = document.createElement('div');
-       // div.style = "margin-top: 10px;"; 
+       // div.style = "margin-top: 10px;";
        // div.innerHTML = '<button class="btn-primary"><img src="' + mapIcons['riding'] + '"> ' + 'Riding' + ' <input type="checkbox" name="filter_list" value="riding"></button><button class="btn-danger" style="margin-left:2px;"><img src="' + mapIcons['offline'] + '"> ' + 'Offline' + ' <input type="checkbox" name="filter_list" value="offline"></button>';
        // legend.appendChild(div);
-   
+
        // map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
        // worldinterval = setInterval(worldMapInitialize, 120000);
    }
-   
+
    function ajaxMapData(){
        var filterarray = new Array();
        var filters;
@@ -1444,7 +1444,7 @@
            filters = ["active", "riding", "offline"];
        }
        var dataString = "filters="+filters;
-   
+
        $.ajax({
            url: "{{ route('corporate.dispatch.map') }}",
            dataType: "JSON",
@@ -1456,12 +1456,12 @@
                    googleMarkers[i].setMap(null);
                }
                googleMarkers.length = 0;
-               
+
                for (var i=0;i<infoDefault.length;i++) {
                    infoDefault[i].close();
                }
                infoDefault.length = 0;
-               
+
                ajaxMarkers = data;
                jQuery.each(ajaxMarkers, $.proxy(function(index, element) {
                    if(checker ==0 || checker ==element.id){
@@ -1484,10 +1484,10 @@
                       labelStyle: {opacity: 1.0},
                       markerid:element.id
                    });
-   
+
                    mapMarkers[element.id] = marker;
                    googleMarkers.push(marker);
-                   
+
                    google.maps.event.addListener(marker, 'click', function() {
                        checker = marker.markerid;
                        for (var i=0;i<infoWindows.length;i++) {
@@ -1497,7 +1497,7 @@
                        ajaxMapData();
                        map.setZoom(19);
                    });
-   
+
                    google.maps.event.addListener(map, "click", function(event) {
                        checker = 0;
                        for (var i=0;i<infoWindows.length;i++) {
@@ -1505,14 +1505,14 @@
                        }
                        map.setZoom(10);
                    });
-   
+
                    }
                }, this));
-   
+
            }
        });
    }
-   
+
    function geocodeLatLng(map, element, marker) {
        //alert(element.latitude);
      var geocoder = new google.maps.Geocoder;
@@ -1527,14 +1527,14 @@
          var boxText = document.createElement("div");
          boxText.style.cssText = "border: 1px solid #208bf9; color: white; background: #208bf9; padding: 5px; border-radius: 8px; font-size: 14px;";
          boxText.innerHTML = "<b>"+element.name+" ("+element.dial_code + element.mobile+") - "+ element.vehicle_no+" ("+element.vehicle_model+")</b><br>"+addr+"<br>";
-   
+
          var myOptions = {
             content: boxText,
             disableAutoPan: false,
             maxWidth: 0,
             pixelOffset: new google.maps.Size(-143, -130),
             zIndex: null,
-            boxStyle: { 
+            boxStyle: {
              opacity: 0.75,
              width: "280px"
             },
@@ -1547,61 +1547,61 @@
          //map.setZoom(18);
          var ib = new InfoBox(myOptions);
          ib.open(map, marker);
-         infoWindows.push(ib); 
-         
+         infoWindows.push(ib);
+
        } else {
          // window.alert('Geocoder failed due to: ' + status);
        }
      });
    }
-   
+
    // function initrip(){
    //     s_input = document.getElementById('s_address');
    //     d_input = document.getElementById('d_address');
    //     stop1_input = document.getElementById('stop1_address');
    //     stop2_input = document.getElementById('stop2_address');
-   
+
    //     s_latitude = document.getElementById('s_latitude');
    //     s_longitude = document.getElementById('s_longitude');
-   
+
    //     stop1_latitude = document.getElementById('stop1_latitude');
    //     stop1_longitude = document.getElementById('stop1_longitude');
-   
+
    //     stop2_latitude = document.getElementById('stop2_latitude');
    //     stop2_longitude = document.getElementById('stop2_longitude');
-   
+
    //     d_latitude = document.getElementById('d_latitude');
    //     d_longitude = document.getElementById('d_longitude');
-       
+
    //     distance = document.getElementById('distance');
-   
+
    //     var autocomplete_source = new google.maps.places.Autocomplete(s_input);
    //     autocomplete_source.bindTo('bounds', map);
-   
+
    //     /*autocomplete_source.setFields(
    //         ['address_components','geometry','icon','name','formatted_address']);*/
-   
+
    //     /*autocomplete_source.setComponentRestrictions(
    //         {'country': ['se','in']});*/
-   
+
    //     var autocomplete_stop1 = new google.maps.places.Autocomplete(stop1_input);
    //     autocomplete_stop1.bindTo('bounds', map);
-   
+
    //     var autocomplete_stop2 = new google.maps.places.Autocomplete(stop2_input);
    //     autocomplete_stop2.bindTo('bounds', map);
-   
+
    //     var autocomplete_destination = new google.maps.places.Autocomplete(d_input);
    //     autocomplete_destination.bindTo('bounds', map);
-   
+
    //     /*autocomplete_destination.setFields(
    //         ['address_components','geometry','icon','name','formatted_address']);*/
-       
+
    //     /*autocomplete_destination.setComponentRestrictions(
    //         {'country': ['se','in']});*/
-   
+
    //     var directionsService = new google.maps.DirectionsService;
    //     var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
-   
+
    //     autocomplete_source.addListener('place_changed', function(event) {
    //         var place = autocomplete_source.getPlace();
    //         if (place.hasOwnProperty('place_id')) {
@@ -1614,7 +1614,7 @@
    //             source = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
    //         }
    //     });
-   
+
    //     autocomplete_destination.addListener('place_changed', function(event) {
    //         var place = autocomplete_destination.getPlace();
    //         if (place.hasOwnProperty('place_id')) {
@@ -1626,7 +1626,7 @@
    //             d_longitude.value = place.geometry.location.lng();
    //             destination = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
    //             updateRoute();
-   
+
    //           var val = $('#service_type').val();
    //           var s_latitude1 = $('#s_latitude').val();
    //           var s_longitude1 = $('#s_longitude').val();
@@ -1652,18 +1652,18 @@
    //                   }
    //               });
    //           }
-   
-   
-   
+
+
+
    //         }
    //     });
-   
+
    //     function updateRoute() {
-   
+
    //         latitude = parseFloat("{{ Auth::guard('corporate')->user()->latitude }}");
    //         longitude = parseFloat("{{ Auth::guard('corporate')->user()->longitude }}");
    //         zooming = parseInt("{{ Auth::guard('corporate')->user()->zoom }}");
-               
+
    //         map = new google.maps.Map(document.getElementById('map'), {
    //             center: {lat: latitude, lng: longitude},
    //             zoom: zooming,
@@ -1678,25 +1678,25 @@
    //                 style: google.maps.ZoomControlStyle.SMALL,
    //                 position: google.maps.ControlPosition.BOTTOM_CENTER
    //               }
-                 
-                    
+
+
    //         });
-   
+
    //         var marker = new google.maps.Marker({
    //             map: map,
    //             icon: '/asset/img/marker-start.png',
    //             anchorPoint: new google.maps.Point(0, -29)
    //         });
-   
+
    //          var markerSecond = new google.maps.Marker({
    //             map: map,
    //             icon: '/asset/img/marker-end.png',
    //             anchorPoint: new google.maps.Point(0, -29)
    //         });
-   
+
    //         directionsDisplay.setMap(null);
    //         directionsDisplay.setMap(map);
-            
+
    //         directionsService.route({
    //             origin: source,
    //             destination: destination,
@@ -1713,7 +1713,7 @@
    //         });
    //     }
    // }
-   
+
 </script>
 <script>
    function initrip(){
@@ -1722,89 +1722,89 @@
        // stop1_input = document.getElementById('stop1_address');
        // stop2_input = document.getElementById('stop2_address');
        stop3_input = document.getElementById('stop3_address');
-   
+
        s_latitude = document.getElementById('s_latitude');
        s_longitude = document.getElementById('s_longitude');
-   
+
        d_latitude = document.getElementById('d_latitude');
        d_longitude = document.getElementById('d_longitude');
-       
+
         s1_latitude = document.getElementById('stop1_latitude');
         s1_longitude = document.getElementById('stop1_longitude');
-   
+
         s2_latitude = document.getElementById('stop2_latitude');
         s2_longitude = document.getElementById('stop2_longitude');
-   
+
         s3_latitude = document.getElementById('stop3_latitude');
         s3_longitude = document.getElementById('stop3_longitude');
-   
+
        distance = document.getElementById('distance');
        seconds  =document.getElementById('seconds');
        // latitude = 42.88668185451463;
        // longitude = -76.17038047904786;
        // zooming = 10;
-           
+
            latitude = parseFloat("{{ Auth::guard('corporate')->user()->latitude }}");
            longitude = parseFloat("{{ Auth::guard('corporate')->user()->longitude }}");
            zooming = parseInt("{{ Auth::guard('corporate')->user()->zoom }}");
-   
-   
+
+
         var autocomplete_stop3 = new google.maps.places.Autocomplete(stop3_input);
         autocomplete_stop3.setComponentRestrictions({'country': ['ind']});
-   
+
        var marker = new google.maps.Marker({
            map: map,
            draggable: true,
            anchorPoint: new google.maps.Point(0, -29),
            icon: '/asset/img/marker-start.png'
        });
-   
+
        var markerSecond = new google.maps.Marker({
            map: map,
            draggable: true,
            anchorPoint: new google.maps.Point(0, -29),
            icon: '/asset/img/marker-end.png'
        });
-   
+
        var marker3 = new google.maps.Marker({
            map: map,
            draggable: true,
            anchorPoint: new google.maps.Point(0, -29),
            icon: '/asset/img/marker-end.png'
        });
-   
+
        var marker4 = new google.maps.Marker({
            map: map,
            draggable: true,
            anchorPoint: new google.maps.Point(0, -29),
            icon: '/asset/img/marker-end.png'
        });
-   
+
        var marker5 = new google.maps.Marker({
            map: map,
            draggable: true,
            anchorPoint: new google.maps.Point(0, -29),
            icon: '/asset/img/marker-end.png'
        });
-   
+
        var directionsService = new google.maps.DirectionsService;
        var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
-   
+
        google.maps.event.addListener(map, 'click', updateMarker);
        google.maps.event.addListener(map, 'click', updateMarkerSecond);
        google.maps.event.addListener(map, 'click', updateMarker_stop1);
        google.maps.event.addListener(map, 'click', updateMarker_stop2);
        google.maps.event.addListener(map, 'click', updateMarker_stop3);
-   
+
        google.maps.event.addListener(marker, 'dragend', updateMarker);
        google.maps.event.addListener(markerSecond, 'dragend', updateMarkerSecond);
        google.maps.event.addListener(marker3, 'dragend', updateMarker_stop1);
        google.maps.event.addListener(marker4, 'dragend', updateMarker_stop2);
        google.maps.event.addListener(marker5, 'dragend', updateMarker_stop3);
-   
+
        window.autocomplete_source =false;
        var s_input = document.getElementById('s_address');
-   
+
        $('#s_address').keyup(function(e) {
            if ($('#s_address').val().length < 4) {
                console.log(s_input.value.length);
@@ -1835,11 +1835,11 @@
                }
            }
        });
-   
-   
+
+
        window.autocomplete_destination =false;
        var d_input = document.getElementById('d_address');
-   
+
        $('#d_address').keyup(function(e) {
            if ($('#d_address').val().length < 4) {
                e.stopImmediatePropagation()
@@ -1894,15 +1894,15 @@
                              }
                          });
                      }
-   
+
                    });
                }
            }
        });
-   
+
        window.autocomplete_stop1 =false;
        stop1_input = document.getElementById('stop1_address');
-   
+
        $('#stop1_address').keyup(function(e) {
            if ($('#stop1_address').val().length < 4) {
                e.stopImmediatePropagation()
@@ -1924,7 +1924,7 @@
                  }, function(results, status) {
                      if (status == google.maps.places.PlacesServiceStatus.OK) {
                          updatestop1(results[0].geometry.location);
-   
+
                          d_input.value = results[0].formatted_address;
                      }
                  });
@@ -1933,10 +1933,10 @@
            }
          }
        });
-   
+
        window.autocomplete_stop2 =false;
        stop2_input = document.getElementById('stop2_address');
-   
+
        $('#stop2_address').keyup(function(e) {
            if ($('#stop2_address').val().length < 4) {
                e.stopImmediatePropagation()
@@ -1965,7 +1965,7 @@
            }
          }
        });
-   
+
        autocomplete_stop3.addListener('place_changed', function(event) {
            markerSecond.setVisible(false);
            var place = autocomplete_stop3.getPlace();
@@ -1981,7 +1981,7 @@
                }, function(results, status) {
                    if (status == google.maps.places.PlacesServiceStatus.OK) {
                        updatestop3(results[0].geometry.location);
-   
+
                        //console.log('destination', results[0]);
                        d_input.value = results[0].formatted_address;
                    }
@@ -1998,7 +1998,7 @@
                updateRoute();
            }
        }
-   
+
        function updateDestination(location) {
            map.panTo(location);
            markerSecond.setPosition(location);
@@ -2006,7 +2006,7 @@
            updateDestinationForm(location.lat(), location.lng());
            updateRoute();
        }
-   
+
        function updatestop1(location) {
            map.panTo(location);
            marker3.setPosition(location);
@@ -2014,7 +2014,7 @@
            updatestop1Form(location.lat(), location.lng());
            // updateRoute();
        }
-   
+
        function updatestop2(location) {
            map.panTo(location);
            marker4.setPosition(location);
@@ -2022,7 +2022,7 @@
            updatestop2Form(location.lat(), location.lng());
            // updateRoute();
        }
-   
+
        function updatestop3(location) {
            map.panTo(location);
            marker5.setPosition(location);
@@ -2030,11 +2030,11 @@
            updatestop3Form(location.lat(), location.lng());
            // updateRoute();
        }
-   
+
        function updateRoute() {
            directionsDisplay.setMap(null);
            directionsDisplay.setMap(map);
-   
+
            directionsService.route({
                origin: source,
                destination: destination,
@@ -2043,54 +2043,54 @@
            }, function(result, status) {
                if (status == google.maps.DirectionsStatus.OK) {
                    directionsDisplay.setDirections(result);
-   
+
                    marker.setPosition(result.routes[0].legs[0].start_location);
                    markerSecond.setPosition(result.routes[0].legs[0].end_location);
-   
+
                    distance.value = result.routes[0].legs[0].distance.value / 1000;
                    seconds.value = result.routes[0].legs[0].duration.value / 60;
                }
            });
-   
+
        }
-   
+
        function updateSourceForm(lat, lng) {
            s_latitude.value = lat;
            s_longitude.value = lng;
-   
+
            source = new google.maps.LatLng(lat, lng);
        }
-   
+
        function updateDestinationForm(lat, lng) {
            d_latitude.value = lat;
            d_longitude.value = lng;
            destination = new google.maps.LatLng(lat, lng);
        }
-   
-   
+
+
        function updatestop1Form(lat, lng) {
            s1_latitude.value = lat;
            s1_longitude.value = lng;
            destination = new google.maps.LatLng(lat, lng);
        }
-   
+
        function updatestop2Form(lat, lng) {
            s2_latitude.value = lat;
            s2_longitude.value = lng;
            destination = new google.maps.LatLng(lat, lng);
        }
-   
+
        function updatestop3Form(lat, lng) {
            s3_latitude.value = lat;
            s3_longitude.value = lng;
            destination = new google.maps.LatLng(lat, lng);
        }
-   
+
        function updateMarker(event) {
-   
+
            marker.setVisible(true);
            marker.setPosition(event.latLng);
-   
+
            var geocoder = new google.maps.Geocoder();
            geocoder.geocode({'latLng': event.latLng}, function (results, status) {
                if (status == google.maps.GeocoderStatus.OK) {
@@ -2108,15 +2108,15 @@
                    location.reload();
                }
            });
-   
+
            updateSource(event.latLng);
        }
-   
+
        function updateMarkerSecond(event) {
-   
+
            markerSecond.setVisible(true);
            markerSecond.setPosition(event.latLng);
-   
+
            var geocoder = new google.maps.Geocoder();
            geocoder.geocode({'latLng': event.latLng}, function (results, status) {
                if (status == google.maps.GeocoderStatus.OK) {
@@ -2134,15 +2134,15 @@
                    location.reload();
                }
            });
-   
+
            updateDestination(event.latLng);
        }
-   
+
        function updateMarker_stop1(event) {
-   
+
            markerSecond.setVisible(true);
            markerSecond.setPosition(event.latLng);
-   
+
            var geocoder = new google.maps.Geocoder();
            geocoder.geocode({'latLng': event.latLng}, function (results, status) {
                if (status == google.maps.GeocoderStatus.OK) {
@@ -2162,12 +2162,12 @@
        });
        updatestop1(event.latLng);
        }
-   
+
        function updateMarker_stop2(event) {
-   
+
        markerSecond.setVisible(true);
        markerSecond.setPosition(event.latLng);
-   
+
        var geocoder = new google.maps.Geocoder();
        geocoder.geocode({'latLng': event.latLng}, function (results, status) {
            if (status == google.maps.GeocoderStatus.OK) {
@@ -2187,13 +2187,13 @@
        });
        updatestop2(event.latLng);
        }
-   
-   
+
+
        function updateMarker_stop3(event) {
-   
+
        markerSecond.setVisible(true);
        markerSecond.setPosition(event.latLng);
-   
+
        var geocoder = new google.maps.Geocoder();
        geocoder.geocode({'latLng': event.latLng}, function (results, status) {
            if (status == google.maps.GeocoderStatus.OK) {
@@ -2213,7 +2213,7 @@
        });
        updatestop3(event.latLng);
    }
-   
+
    }
 </script>
 <script>
@@ -2221,37 +2221,37 @@
        var corporate_input, corporatedes_input;
        var c_latitude, c_longitude;
        var cd_latitude, cd_longitude;
-   
+
        corporate_input = document.getElementById('c_address');
        corporatedes_input = document.getElementById('cd_address');
-   
+
        c_latitude = document.getElementById('c_latitude');
        c_longitude = document.getElementById('c_longitude');
-   
+
        cd_latitude = document.getElementById('cd_latitude');
        cd_longitude = document.getElementById('cd_longitude');
-       
+
        distance = document.getElementById('distance');
        seconds = document.getElementById('seconds');
        var autocomplete_source = new google.maps.places.Autocomplete(corporate_input);
-   
+
        /*autocomplete_source.setFields(
            ['address_components','geometry','icon','name','formatted_address']);*/
-   
+
        autocomplete_source.setComponentRestrictions(
            {'country': ['se','in']});
-   
+
        var autocomplete_destination = new google.maps.places.Autocomplete(corporatedes_input);
-   
+
        /*autocomplete_destination.setFields(
            ['address_components','geometry','icon','name','formatted_address']);*/
-       
+
        autocomplete_destination.setComponentRestrictions(
            {'country': ['se','in']});
-   
+
        var directionsService = new google.maps.DirectionsService;
        var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
-   
+
        autocomplete_source.addListener('place_changed', function(event) {
            var place = autocomplete_source.getPlace();
            if (place.hasOwnProperty('place_id')) {
@@ -2263,7 +2263,7 @@
                c_longitude.value = place.geometry.location.lng();
            }
        });
-   
+
        autocomplete_destination.addListener('place_changed', function(event) {
            var place = autocomplete_destination.getPlace();
            if (place.hasOwnProperty('place_id')) {
@@ -2281,12 +2281,12 @@
 <!-- <script>
    $('<div class="item"><img src="https://dev.unicotaxi.com/uploads/2cc62009f584748c531d07f8753dcd809e5cc0d4.png" style="width: 70px;margin-left: 46px;"><span style="float: revert;padding: 11px;font-weight:bold;font-size:17px;">Sedan</span><span style="float: inherit;padding: 17px;"><i class="fa fa-user" aria-hidden="true"> 3</i></span><strong><span style="float: inherit;padding: 85px;font-size=24">134</span></strong><div class="carousel-caption"></div>   </div>').appendTo('.carousel-inner');
    $('<li data-target="#carousel-example-generic" data-slide-to=" "></li>').appendTo('.carousel-indicators');
-   
-   
+
+
    $('.item').first().addClass('active');
    $('.carousel-indicators > li').first().addClass('active');
    $('#carousel-example-generic').carousel();
-   
+
    </script>
    -->
 <script type="text/javascript">
@@ -2297,7 +2297,7 @@
    swipeToSlide: true,
    infinite: false
    });
-   
+
    .on("mousewheel", function (event) {
    event.preventDefault();
    if (event.deltaX > 0 || event.deltaY < 0) {
@@ -2336,16 +2336,16 @@
     $('.driver-option').toggle();
            $('.driverdetailbtn').show();
        });
-   
-   
+
+
 </script>
 <script>
-   $('#myModal').modal('show'); 
+   $('#myModal').modal('show');
    $("div").removeClass("modal-backdrop");
-   
+
    $(document).ready(function () {
      $("#add_trip").click(function () {
-       $('#myModal').modal('show'); 
+       $('#myModal').modal('show');
        $("div").removeClass("modal-backdrop");
      });
      $('.stop1').hide();
@@ -2354,7 +2354,7 @@
      $('.distance').hide();
      $("#morefield").click(function(){
            $(".d_latitude").toggle(function(){
-   
+
            },function(){
              $(".distance").hide();
            });
@@ -2379,7 +2379,7 @@
      $('.circle').removeClass("circle2");
          }
    });
-   
+
      $("#morefield").click(function(){
              $(".stop1").show();
              $(".stop2").show();
@@ -2391,7 +2391,7 @@
    });/*var totalItems = $('#carousel-example-generic .carousel-item').length;
    var currentIndex1 = $('#carousel-example-generic .carousel-item.active').index() + 1;*/
    var currentIndex = $('#carousel-example-generic .carousel-item.active #service-id').html();
-   $("#service_type").val(currentIndex); 
+   $("#service_type").val(currentIndex);
    $(".next").click(function(){
    var currentIndex = $('#carousel-example-generic .carousel-item.active').next().html();
    if(currentIndex == undefined){
@@ -2399,8 +2399,8 @@
    }
    var v1 = $(currentIndex);
    var v2 = v1.find('#service-id').html();
-   $("#service_type").val(v2); 
-   
+   $("#service_type").val(v2);
+
                  var val = $('#service_type').val();
                  var s_latitude = $('#s_latitude').val();
                  var s_longitude = $('#s_longitude').val();
@@ -2426,26 +2426,26 @@
                          }
                      });
                  }
-   
+
    });
-   
+
    $(".prev").click(function(){
-   
+
    var currentIndex = $('#carousel-example-generic .carousel-item.active').prev().html();
    if(currentIndex == undefined){
     var currentIndex = $('#carousel-example-generic .carousel-item').last().html();
    }
    var v1 = $(currentIndex);
    var v2 = v1.find('#service-id').html();
-   $("#service_type").val(v2); 
-   
+   $("#service_type").val(v2);
+
                  var val = $('#service_type').val();
                  var s_latitude = $('#s_latitude').val();
                  var s_longitude = $('#s_longitude').val();
                  var d_latitude = $('#d_latitude').val();
                  var d_longitude = $('#d_longitude').val();
-                
-   
+
+
                  if(s_latitude !='' && s_longitude !='' && val !=''){
                      $.ajax({
                          url: '/corporate/dispatch/fare',
@@ -2467,42 +2467,42 @@
                      });
                  }
    });
-               
+
    });
 </script>
 <script type="text/javascript">
    const chk = document.getElementById('chk');
-   
+
    var switchStatus = true;
    $('#pic1').attr('src', '/asset/img/whitecar.png');
    chk.addEventListener('change', () => {
        var chkPassport = document.getElementById("chk");
-   
+
            if (chkPassport.checked) {
                $('#schedule_time_block').show();
       $('#pic1').attr('src', '/asset/img/caricon-trip.png');
       $('#pic2').attr('src', '/asset/img/calendaricon-white.png');
-      
+
            } else {
                $('#schedule_time_block').hide();
       $('#pic1').attr('src', '/asset/img/whitecar.png');
       $('#pic2').attr('src', '/asset/img/sheduleicon-trip.png');
-   
+
            }
-   
+
        document.body.classList.toggle('dark');
    });
-   
+
    // SOCIAL PANEL JS
    const floating_btn = document.querySelector('.floating-btn');
    const close_btn = document.querySelector('.close-btn');
    const social_panel_container = document.querySelector('.social-panel-container');
-   
-   
+
+
    floating_btn.addEventListener('click', () => {
        social_panel_container.classList.toggle('visible')
    });
-   
+
    close_btn.addEventListener('click', () => {
        social_panel_container.classList.remove('visible')
    });
@@ -2515,7 +2515,7 @@
      filter = input.value.toUpperCase();
      table = document.getElementById("myTable");
      tr = table.getElementsByTagName("tr");
-   
+
      // Loop through all table rows, and hide those who don't match the search query
      for (i = 0; i < tr.length; i++) {
        td = tr[i].getElementsByTagName("td")[0];
@@ -2544,7 +2544,7 @@
             var a = $(this).find('span').text();
             var count = $(".notification").text();
             var b = parseInt($(".notification").text());
-            var c = b-1; 
+            var c = b-1;
             $(this).remove();
     $.ajax({
                   type: "GET",
@@ -2564,7 +2564,7 @@
             });
         });
    $('.clear-note').click(function(){
-   
+
         $.ajax({
                   url: "{{ url('/corporate/clear-notify') }}",
                   dataType: 'json',
@@ -2590,12 +2590,12 @@
      $('#driverallstatus').hover(function() {
        clearTimeout(timer);
        $('#driverallstatus').addClass('open');
-       
+
      }, function() {
         timer = setTimeout(function() {
          $('#driverallstatus').removeClass("open");
        }, 200);
-       
+
      });
    });
 </script>

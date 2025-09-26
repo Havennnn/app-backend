@@ -38,27 +38,27 @@
                         <dt class="col-sm-3">@lang('admin.member.ride_scheduled_time') :</dt>
                         <dd class="col-sm-8">
                             @if($request->schedule_at != "0000-00-00 00:00:00")
-                                {{ date('jS \of F Y h:i:s A', strtotime($request->schedule_at)) }} 
+                                {{ date('jS \of F Y h:i:s A', strtotime($request->schedule_at)) }}
                             @else
-                                - 
+                                -
                             @endif
                         </dd>
                         @else
                         <dt class="col-sm-3">@lang('admin.member.ride_start_time') :</dt>
                         <dd class="col-sm-8">
                             @if($request->started_at != "0000-00-00 00:00:00")
-                                {{ date('jS \of F Y h:i:s A', strtotime($request->started_at)) }} 
+                                {{ date('jS \of F Y h:i:s A', strtotime($request->started_at)) }}
                             @else
-                                - 
+                                -
                             @endif
                          </dd>
 
                         <dt class="col-sm-3">@lang('admin.member.ride_end_time') :</dt>
                         <dd class="col-sm-8">
-                            @if($request->finished_at != "0000-00-00 00:00:00") 
+                            @if($request->finished_at != "0000-00-00 00:00:00")
                                 {{ date('jS \of F Y h:i:s A', strtotime($request->finished_at)) }}
                             @else
-                                - 
+                                -
                             @endif
                         </dd>
                         @endif
@@ -200,5 +200,5 @@
         map.fitBounds(bounds);
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places&callback=initMap" async defer></script>
 @endsection

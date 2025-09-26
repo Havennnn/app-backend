@@ -99,7 +99,7 @@
 .xdsoft_datetimepicker {
     border-radius:20px !important;
 }
-    
+
 
 </style>
 @endsection
@@ -118,7 +118,7 @@
                                          <!-- <a href="#" class="banner-btn">Learn More</a>  -->
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -220,11 +220,11 @@
                         text-indent: 1px;
                         text-overflow: '';">
                         <option value="">Por favor seleccione</option>
-                            @foreach($services as $service) 
+                            @foreach($services as $service)
                                 <option value="{{ $service->id }}">{{ $service->name }}</option>
                             @endforeach
                         </select>
-                    </div> 
+                    </div>
                 </div>
 
                                 <div class="col-lg-12">
@@ -246,7 +246,7 @@
                                         <option value="Ride Now">Montar ahora</option>
                                         <option value="Shedule Ride">Horario de viaje</option>
                                   </select>
-                               </div>   
+                               </div>
                              </div>
 
                                 <div class="col-lg-12">
@@ -304,7 +304,7 @@
         <section class="offer-style-one">
             <div class="container">
                 <div class="block-title text-center">
-                    <div><img src="{{asset('asset/img/unico.png')}}" alt="" width="10%"></div> 
+                    <div><img src="{{asset('asset/img/unico.png')}}" alt="" width="10%"></div>
                     <p>Mira nuestros beneficios</p>
                     <h2>que estamos ofreciendo</h2>
                 </div><!-- /.block-title -->
@@ -365,7 +365,7 @@
                     <div class="col-lg-6">
                         <div class="content-block">
                             <div class="block-title">
-                                <div><img src="{{asset('asset/img/unico.png')}}" alt="" width="20%"></div> 
+                                <div><img src="{{asset('asset/img/unico.png')}}" alt="" width="20%"></div>
                                 <p>Reserva ahora desde la aplicación</p>
                                 <h2>Obtenga una aplicación móvil gratuita</h2>
                             </div><!-- /.block-title -->
@@ -392,8 +392,8 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.cta-style-three -->
-      
-       
+
+
         <section class="cta-style-two no-zigzag">
             <div class="container">
                 <div class="content-block">
@@ -410,7 +410,7 @@
 @section('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript">
-    
+
     $(document).ready(function(){
         $('#schedule_time').val('{{ \Carbon\Carbon::now() }}');
     });
@@ -421,7 +421,7 @@
     });
 
     $(document).ready(function(){
-        $('#addition').on('click', function(event) {        
+        $('#addition').on('click', function(event) {
              $('.booking-option').toggle();
         });
 	$('.scheduleride').hide();
@@ -431,11 +431,11 @@
 			$('.scheduleride').show();
 		}else{
 			$('.scheduleride').hide();
-		}       
+		}
     	});
     });
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 <script type="text/javascript">
   function initMap1() {
     var sourceInput = document.getElementById('source');
@@ -484,11 +484,11 @@ function myFunction() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "LEER MÁS"; 
+    btnText.innerHTML = "LEER MÁS";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "LEER MÁS"; 
+    btnText.innerHTML = "LEER MÁS";
     moreText.style.display = "inline";
   }
 }
@@ -501,11 +501,11 @@ function myFunction2() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "LEER MÁS"; 
+    btnText.innerHTML = "LEER MÁS";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "LEER MÁS"; 
+    btnText.innerHTML = "LEER MÁS";
     moreText.style.display = "inline";
   }
 }
@@ -518,11 +518,11 @@ function myFunction3() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "LEER MÁS"; 
+    btnText.innerHTML = "LEER MÁS";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "LEER MÁS"; 
+    btnText.innerHTML = "LEER MÁS";
     moreText.style.display = "inline";
   }
 }

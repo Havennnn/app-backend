@@ -662,10 +662,10 @@ button.Zebra_DatePicker_Icon {
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
 <link rel="stylesheet" href="{{asset('main/vendor/toastr/toastr.min.css')}}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" 
-href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
-integrity="sha384- 
- B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
+<link rel="stylesheet"
+href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+integrity="sha384-
+ B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
   crossorigin="anonymous">
 <link rel="stylesheet" href="{{asset('main/ZebraDatetimePicker/css/default/zebra_datepicker.min.css')}}" type="text/css">
 @endsection
@@ -796,7 +796,7 @@ integrity="sha384-
                     </div>
                 </div>
               </form>
-            </div> 
+            </div>
         </div>
         <!--<div class="tab-pane" id="tab-4" role="tabpanel">
             <div class="alert alert-success">
@@ -820,7 +820,7 @@ integrity="sha384-
 		<div class="has-search">
     <span class="fa fa-search form-control-feedback"></span>
     <input onkeyup="myFunction()" class="form-control" id="myInput" type="text"  style="z-index: 1000 !important;border-radius:0px;" placeholder="Search for drivers">
-  </div>   		
+  </div>
 	</div>
 	<div id="dismiss">
     		<i class="fa fa-caret-left"></i>
@@ -837,12 +837,12 @@ integrity="sha384-
 <div class="" style="background: white;z-index: 1000 !important;opacity: 10;">
    </div>
     <div class="driver_list">
-    </div> 
+    </div>
 </div>
 
 @include('admin.dispatch.layout.partials.header')
 <div class="site-content">
-	
+
     	<div class="row bg-title">
 <!--           <select class="form-control filter-box" id="choose_corporate" onchange="driver_updates()">
               <option value="">Select Company</option>
@@ -881,7 +881,7 @@ integrity="sha384-
                 <option value="station_wagon">Station wagon</option>
                 <option value="booster_seat">Booster seat</option>
             </select>
-        
+
             <select class="form-control filter-box" id="driver_status" onchange="driver_updates()">
                 <option value="">All Status</option>
                 <option value="active">Active</option>
@@ -944,7 +944,7 @@ integrity="sha384-
 @endsection
 
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" ></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" ></script>
 
 
 
@@ -1008,7 +1008,7 @@ integrity="sha384-
     onSelect: function() {
 
                 var current_time=<?php echo json_encode(\Carbon\Carbon::now()->addMinutes(30)->format('d-m-Y g:i A'))?>;
-        
+
                 if($('#schedule_time').val() >= current_time){
                     $('.schedule_time_block').hide();
                 }else{
@@ -1085,12 +1085,12 @@ $(document).ready(function() {
   $('#driverallstatus').hover(function() {
     clearTimeout(timer);
     $('#driverallstatus').addClass('open');
-    
+
   }, function() {
      timer = setTimeout(function() {
       $('#driverallstatus').removeClass("open");
     }, 200);
-    
+
   });
 });
 </script>
@@ -1140,7 +1140,7 @@ $(document).ready(function() {
         }else{
             $('.first_name').hide();
         }
-    
+
         if($('#email').val() == ''){
             $('.email').show();
             require = 1;
@@ -1180,14 +1180,14 @@ $(document).ready(function() {
         }
 
 	if($("#provider_auto_assign").prop("checked") == false){
-		$("#provider_auto_assign").val('false');         
+		$("#provider_auto_assign").val('false');
         }else{
             $("#provider_auto_assign").val('true');
         }
         if(require == 1){
             return false;
         }
-        
+
         $(".trip_btn").attr("disabled", true);
 	       var service = $('#service_type').val();
         $.ajax({
@@ -1199,7 +1199,7 @@ $(document).ready(function() {
             success: function(data) {
               if(data.success ==1){
                 $('#clear').trigger("click");
-                $('.alert-success').show().delay(5000).fadeOut(); 
+                $('.alert-success').show().delay(5000).fadeOut();
             		$("#message-success").append(data.message);
                             activeTab('tab-1');
             		$("#myModal .close").trigger("click");
@@ -1208,10 +1208,10 @@ $(document).ready(function() {
                 	$("#getcode").empty();
             		var latitude = $("#s_address").val();
             		var longitude = $("#d_address").val();
-			var id = data.id; 
+			var id = data.id;
             		var current = data.current;
             		if(current == 0){
-            			$.get('providers', { 
+            			$.get('providers', {
                 			//latitude: 11.02974830,
                 			//longitude: 76.94634310,
                 			service_type: service,
@@ -1230,18 +1230,18 @@ $(document).ready(function() {
             			});
 
             		}else{
-               			$("#getcode").append("<tr><td>@lang('admin.triplist.request_already_assigned')</td></tr>"); 
+               			$("#getcode").append("<tr><td>@lang('admin.triplist.request_already_assigned')</td></tr>");
             		}
 			$("#notedata").find("embed").remove();
 			$('#notedata').append('<embed src="{{asset('asset/img/notification.mp3')}}" loop="true" autostart="true" width="2" height="0">');
 			$("#AutoAssignModal").modal("toggle");
-			$("div").removeClass("modal-backdrop");			
+			$("div").removeClass("modal-backdrop");
             	}else{
 			$('#notedata').append('<embed src="{{asset('asset/img/notification.mp3')}}" loop="true" autostart="true" width="2" height="0">');
 			setTimeout(function () {
         			location.reload(true);
-      			}, 2000);			
-			
+      			}, 2000);
+
 		}
               }else{
                 $(".trip_btn").attr("disabled", false);
@@ -1266,7 +1266,7 @@ $(document).ready(function() {
         }else{
             $('.corporate_id').hide();
         }
-        
+
         if($('#c_count').val() == ''){
             $('.c_count').show();
             require = 1;
@@ -1464,7 +1464,7 @@ $(document).ready(function() {
         setInterval(function(){
             driver_movement();
         }, 30000);
-    });   
+    });
 </script>
  --><script>
 
@@ -1498,14 +1498,14 @@ $(document).ready(function() {
     var s_latitude, s_longitude;
     var d_latitude, d_longitude;
     var stop1_latitude, stop1_longitude;
-    var stop2_latitude, stop2_longitude;  
+    var stop2_latitude, stop2_longitude;
       var distance;
     var infoDefault = [];
     var infoWindows = [];
     var interval;
     var worldinterval;
     var checker =0;
-    
+
     function worldMapInitialize() {
         clearInterval(interval);
         clearInterval(worldinterval);
@@ -1522,7 +1522,7 @@ $(document).ready(function() {
         latitude = parseFloat("{{ Auth::guard('admin')->user()->admin_lat }}");
         longitude = parseFloat("{{ Auth::guard('admin')->user()->admin_long }}");
         zooming = parseInt("{{ Auth::guard('admin')->user()->admin_zoom }}");
-            
+
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: latitude, lng: longitude},
             zoom: zooming,
@@ -1536,7 +1536,7 @@ $(document).ready(function() {
               zoomControlOptions: {
                 style: google.maps.ZoomControlStyle.SMALL,
                 position: google.maps.ControlPosition.BOTTOM_RIGHT
-              }                 
+              }
         });
         ajaxMapData();
       // interval = setInterval(ajaxMapData, 5000);
@@ -1548,13 +1548,13 @@ $(document).ready(function() {
         // mapelement.append(legend);
 
         // var div = document.createElement('div');
-        // div.className = ""; 
+        // div.className = "";
         // div.innerHTML = '<button class="btn-warning"><img src="' + mapIcons['person'] + '"> ' + '   Person ' + ' <input type="checkbox" name="filter_list" value="person"></button><button class="btn-success" style="margin-left:2px;"><img src="' + mapIcons['active'] + '"> ' + 'Acitve' + ' <input type="checkbox" name="filter_list" value="active">';
         // legend.appendChild(div);
 
-        
+
         // var div = document.createElement('div');
-        // div.style = "margin-top: 10px;"; 
+        // div.style = "margin-top: 10px;";
         // div.innerHTML = '<button class="btn-primary"><img src="' + mapIcons['riding'] + '"> ' + 'Riding' + ' <input type="checkbox" name="filter_list" value="riding"></button><button class="btn-danger" style="margin-left:2px;"><img src="' + mapIcons['offline'] + '"> ' + 'Offline' + ' <input type="checkbox" name="filter_list" value="offline"></button>';
         // legend.appendChild(div);
 
@@ -1587,12 +1587,12 @@ $(document).ready(function() {
                     googleMarkers[i].setMap(null);
                 }
                 googleMarkers.length = 0;
-                
+
                 for (var i=0;i<infoDefault.length;i++) {
                     infoDefault[i].close();
                 }
                 infoDefault.length = 0;
-                
+
                 ajaxMarkers = data;
                 jQuery.each(ajaxMarkers, $.proxy(function(index, element) {
                     if(checker ==0 || checker ==element.id){
@@ -1619,7 +1619,7 @@ $(document).ready(function() {
 
                     mapMarkers[element.id] = marker;
                     googleMarkers.push(marker);
-                    
+
                     google.maps.event.addListener(marker, 'click', function() {
                         checker = marker.markerid;
                         for (var i=0;i<infoWindows.length;i++) {
@@ -1666,7 +1666,7 @@ $(document).ready(function() {
              maxWidth: 0,
              pixelOffset: new google.maps.Size(-143, -130),
              zIndex: null,
-             boxStyle: { 
+             boxStyle: {
               opacity: 0.75,
               width: "280px"
              },
@@ -1679,8 +1679,8 @@ $(document).ready(function() {
           //map.setZoom(18);
           var ib = new InfoBox(myOptions);
           ib.open(map, marker);
-          infoWindows.push(ib); 
-          
+          infoWindows.push(ib);
+
         } else {
           // window.alert('Geocoder failed due to: ' + status);
         }
@@ -1704,7 +1704,7 @@ $(document).ready(function() {
 
     //     d_latitude = document.getElementById('d_latitude');
     //     d_longitude = document.getElementById('d_longitude');
-        
+
     //     distance = document.getElementById('distance');
 
     //     var autocomplete_source = new google.maps.places.Autocomplete(s_input);
@@ -1727,7 +1727,7 @@ $(document).ready(function() {
 
     //     /*autocomplete_destination.setFields(
     //         ['address_components','geometry','icon','name','formatted_address']);*/
-        
+
     //     /*autocomplete_destination.setComponentRestrictions(
     //         {'country': ['se','in']});*/
 
@@ -1752,7 +1752,7 @@ $(document).ready(function() {
     //     });
 
     //     autocomplete_stop1.addListener('place_changed', function(event) {
-        
+
     //         var place = autocomplete_stop1.getPlace();
     //         if (place.hasOwnProperty('place_id')) {
     //             if (!place.geometry) {
@@ -1814,7 +1814,7 @@ $(document).ready(function() {
     //         latitude = parseFloat("{{ Auth::guard('admin')->user()->admin_lat }}");
     //         longitude = parseFloat("{{ Auth::guard('admin')->user()->admin_long }}");
     //         zooming = parseInt("{{ Auth::guard('admin')->user()->admin_zoom }}");
-                
+
     //         map = new google.maps.Map(document.getElementById('map'), {
     //             center: {lat: latitude, lng: longitude},
     //             zoom: zooming,
@@ -1829,8 +1829,8 @@ $(document).ready(function() {
     //                 style: google.maps.ZoomControlStyle.SMALL,
     //                 position: google.maps.ControlPosition.BOTTOM_LEFT
     //               }
-                  
-                     
+
+
     //         });
 
     //         var marker = new google.maps.Marker({
@@ -1859,10 +1859,10 @@ $(document).ready(function() {
 
     //         directionsDisplay.setMap(null);
     //         directionsDisplay.setMap(map);
-             
+
     //         // directionsDisplay1.setMap(null);
     //         // directionsDisplay1.setMap(map);
-            
+
     //         // directionsService1.route({
     //         // origin: source,
     //         // destination: stop1,
@@ -1899,7 +1899,7 @@ $(document).ready(function() {
     //         latitude = parseFloat("{{ Auth::guard('admin')->user()->admin_lat }}");
     //         longitude = parseFloat("{{ Auth::guard('admin')->user()->admin_long }}");
     //         zooming = parseInt("{{ Auth::guard('admin')->user()->admin_zoom }}");
-                
+
     //         map = new google.maps.Map(document.getElementById('map'), {
     //             center: {lat: latitude, lng: longitude},
     //             zoom: zooming,
@@ -1914,8 +1914,8 @@ $(document).ready(function() {
     //                 style: google.maps.ZoomControlStyle.SMALL,
     //                 position: google.maps.ControlPosition.BOTTOM_LEFT
     //               }
-                  
-                     
+
+
     //         });
 
     //         var marker = new google.maps.Marker({
@@ -1932,10 +1932,10 @@ $(document).ready(function() {
 
     //         // directionsDisplay.setMap(null);
     //         // directionsDisplay.setMap(map);
-             
+
     //         // directionsDisplay1.setMap(null);
     //         // directionsDisplay1.setMap(map);
-            
+
     //         // directionsService1.route({
     //         // origin: source,
     //         // destination: stop1,
@@ -1983,7 +1983,7 @@ $(document).ready(function() {
 
         d_latitude = document.getElementById('d_latitude');
         d_longitude = document.getElementById('d_longitude');
-        
+
          s1_latitude = document.getElementById('stop1_latitude');
          s1_longitude = document.getElementById('stop1_longitude');
 
@@ -1996,7 +1996,7 @@ $(document).ready(function() {
         distance = document.getElementById('distance');
         seconds  =document.getElementById('seconds');
 
-            
+
       latitude = parseFloat("{{ Auth::guard('admin')->user()->admin_lat }}");
       longitude = parseFloat("{{ Auth::guard('admin')->user()->admin_long }}");
       zooming = parseInt("{{ Auth::guard('admin')->user()->admin_zoom }}");
@@ -2087,7 +2087,7 @@ $(document).ready(function() {
             }
         });
 
-        
+
         window.autocomplete_destination =false;
         var d_input = document.getElementById('d_address');
 
@@ -2459,7 +2459,7 @@ $(document).ready(function() {
 
         cd_latitude = document.getElementById('cd_latitude');
         cd_longitude = document.getElementById('cd_longitude');
-        
+
         distance = document.getElementById('distance');
 
         var autocomplete_source = new google.maps.places.Autocomplete(corporate_input);
@@ -2471,10 +2471,10 @@ $(document).ready(function() {
             {'country': ['se','in']});
 
         var autocomplete_destination = new google.maps.places.Autocomplete(corporatedes_input);
-    
+
         /*autocomplete_destination.setFields(
             ['address_components','geometry','icon','name','formatted_address']);*/
-        
+
         autocomplete_destination.setComponentRestrictions(
             {'country': ['se','in']});
 
@@ -2512,7 +2512,7 @@ $(document).ready(function() {
     $('<div class="item"><img src="https://dev.unicotaxi.com/uploads/2cc62009f584748c531d07f8753dcd809e5cc0d4.png" style="width: 70px;margin-left: 46px;"><span style="float: revert;padding: 11px;font-weight:bold;font-size:17px;">Sedan</span><span style="float: inherit;padding: 17px;"><i class="fa fa-user" aria-hidden="true"> 3</i></span><strong><span style="float: inherit;padding: 85px;font-size=24">134</span></strong><div class="carousel-caption"></div>   </div>').appendTo('.carousel-inner');
     $('<li data-target="#carousel-example-generic" data-slide-to=" "></li>').appendTo('.carousel-indicators');
 
-  
+
   $('.item').first().addClass('active');
   $('.carousel-indicators > li').first().addClass('active');
   $('#carousel-example-generic').carousel();
@@ -2611,13 +2611,13 @@ $(document).on("mousewheel", function (event) {
 
 </script>
 <script>
-  
-$('#myModal').modal('show'); 
+
+$('#myModal').modal('show');
 $("div").removeClass("modal-backdrop");
 
 $(document).ready(function () {
   $("#add_trip").click(function () {
-    $('#myModal').modal('show'); 
+    $('#myModal').modal('show');
     $("div").removeClass("modal-backdrop");
   });
   $('.stop1').hide();
@@ -2663,7 +2663,7 @@ $("#morefield3").click(function(){
 /*var totalItems = $('#carousel-example-generic .carousel-item').length;
 var currentIndex1 = $('#carousel-example-generic .carousel-item.active').index() + 1;*/
 var currentIndex = $('#carousel-example-generic .carousel-item.active #service-id').html();
-$("#service_type").val(currentIndex); 
+$("#service_type").val(currentIndex);
 $(".next").click(function(){
 var currentIndex = $('#carousel-example-generic .carousel-item.active').next().html();
 if(currentIndex == undefined){
@@ -2671,7 +2671,7 @@ if(currentIndex == undefined){
 }
 var v1 = $(currentIndex);
 var v2 = v1.find('#service-id').html();
-$("#service_type").val(v2); 
+$("#service_type").val(v2);
 
               var val = $('#service_type').val();
               var s_latitude = $('#s_latitude').val();
@@ -2709,14 +2709,14 @@ if(currentIndex == undefined){
 }
 var v1 = $(currentIndex);
 var v2 = v1.find('#service-id').html();
-$("#service_type").val(v2); 
+$("#service_type").val(v2);
 
               var val = $('#service_type').val();
               var s_latitude = $('#s_latitude').val();
               var s_longitude = $('#s_longitude').val();
               var d_latitude = $('#d_latitude').val();
               var d_longitude = $('#d_longitude').val();
-             
+
 
               if(s_latitude !='' && s_latitude !='' && val !=''){
                   $.ajax({
@@ -2739,7 +2739,7 @@ $("#service_type").val(v2);
                   });
               }
 });
-            
+
 });
 </script>
 <script type="text/javascript">
@@ -2755,7 +2755,7 @@ chk.addEventListener('change', () => {
             $('.set_trip_type').val(2);
 		$('#pic1').attr('src', '/asset/img/caricon-trip.png');
 		$('#pic2').attr('src', '/asset/img/calendaricon-white.png');
-		
+
         } else {
             $('#schedule_time_block').hide();
             $('.set_trip_type').val(1);
@@ -2818,7 +2818,7 @@ function myFunction() {
       		var a = $(this).find('span').text();
       		var count = $(".notification").text();
       		var b = parseInt($(".notification").text());
-      		var c = b-1; 
+      		var c = b-1;
       		$(this).remove();
 		$.ajax({
             		type: "GET",
@@ -2836,7 +2836,7 @@ function myFunction() {
               		}
             		}
       		});
-      
+
     	});
 	$('.clear-note').click(function(){
 

@@ -6,13 +6,13 @@
 
 <div class="content-area py-1">
     <div class="container-fluid">
-    	
+
     	<div class="row bg-title">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <h4 class="page-title">Zone management</h4><a href="{{ route('admin.location.index') }}" class="btn btn-outline-warning btn-rounded w-min-sm m-l-0-75 waves-effect waves-light">List Location</a>
             </div>
             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                
+
                 <ol class="breadcrumb">
                     <li><a href="{{ route('admin.dashboard') }}">@lang('admin.dashboard')</a></li>
                     <li class="active">Add Location</li>
@@ -257,14 +257,14 @@
         });
         /*        google.maps.event.addListener(searchBox, 'places_changed', function() {
          var places = searchBox.getPlaces();
-         
+
          if (places.length == 0) {
          return;
          }
          for (var i = 0, marker; marker = placeMarkers[i]; i++) {
          marker.setMap(null);
          }
-         
+
          // For each place, get the icon, place name, and location.
          placeMarkers = [];
          var bounds = new google.maps.LatLngBounds();
@@ -276,7 +276,7 @@
          anchor: new google.maps.Point(17, 34),
          scaledSize: new google.maps.Size(25, 25)
          };
-         
+
          // Create a marker for each place.
          var marker = new google.maps.Marker({
          map: map,
@@ -284,15 +284,15 @@
          title: place.name,
          position: place.geometry.location
          });
-         
+
          placeMarkers.push(marker);
          bounds.extend(place.geometry.location);
          }
-         
+
          map.fitBounds(bounds);
          map.setZoom(14);
          });*/
-        //~ EndSearch(); ============================================    
+        //~ EndSearch(); ============================================
         // Polygon Coordinates
         var tlongitude = $('#tlongitude').val();
         var tlatitude = $('#tlatitude').val();

@@ -32,7 +32,7 @@
 
             <form class="form-horizontal" action="{{ route('admin.settings.store_business') }}" method="POST" enctype="multipart/form-data" role="form">
             	{{csrf_field()}}
-            	
+
 				<div class="form-group row">
 					<label for="mail_enable" class="col-xs-2 col-form-label">@lang('admin.member.mail_enable')</label>
 					<div class="col-xs-8">
@@ -83,7 +83,7 @@
 					<div class="col-xs-8">
 						<input class="form-control" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" value="{{ Setting::get('provider_search_radius', '100')  }}" name="provider_search_radius" required id="provider_search_radius" placeholder="Provider Search Radius" >
 					</div>
-				</div>	
+				</div>
 				<div class="form-group row">
 					<label for="distance_unit" class="col-xs-2 col-form-label">Distance unit</label>
 					<div class="col-xs-8">
@@ -92,7 +92,7 @@
 							<option value="miles" @if(Setting::get('distance_unit') == 'miles') selected @endif>Miles</option>
 						</select>
 					</div>
-				</div>	
+				</div>
 				<div class="form-group row">
 					<label for="auto_assign" class="col-xs-2 col-form-label">Auto assign</label>
 					<div class="col-xs-8">
@@ -101,8 +101,8 @@
 						<option value="0" @if(Setting::get('auto_assign', 0) == 0) selected @endif>Disable</option>
 					</select>
 					</div>
-				</div>	
-				
+				</div>
+
 				<div class="form-group row">
                     <label for="tax_percentage" class="col-xs-2 col-form-label">@lang('admin.member.country')</label>
                     <div class="col-xs-8">
@@ -207,7 +207,7 @@
 @endsection
 
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 <script type="text/javascript">
   function initMap() {
 

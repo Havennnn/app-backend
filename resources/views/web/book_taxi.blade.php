@@ -94,7 +94,7 @@
     #more {display: none;}
     #more2 {display: none;}
     #more3 {display: none;}
-    
+
     .pac-container, .pac-item {
     border-radius:10px !important;
     border: 0px !important;
@@ -196,11 +196,11 @@
                         text-indent: 1px;
                         text-overflow: '';">
                         <option value="">Please select</option>
-                            @foreach($services as $service) 
+                            @foreach($services as $service)
                                 <option value="{{ $service->id }}">{{ $service->name }}</option>
                             @endforeach
                         </select>
-                    </div> 
+                    </div>
                 </div>
 
                                 <div class="col-lg-12">
@@ -222,7 +222,7 @@
                                         <option value="Ride Now">Ride Now</option>
                                         <option value="Shedule Ride">Shedule Ride</option>
                                   </select>
-                               </div>   
+                               </div>
                              </div>
 
                                 <div class="col-lg-12">
@@ -282,7 +282,7 @@
 @section('scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript">
-    
+
     $(document).ready(function(){
         $('#schedule_time').val('{{ \Carbon\Carbon::now() }}');
     });
@@ -293,7 +293,7 @@
     });
 
     $(document).ready(function(){
-        $('#addition').on('click', function(event) {        
+        $('#addition').on('click', function(event) {
              $('.booking-option').toggle();
         });
 	$('.scheduleride').hide();
@@ -303,11 +303,11 @@
 			$('.scheduleride').show();
 		}else{
 			$('.scheduleride').hide();
-		}       
+		}
     	});
     });
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 <script type="text/javascript">
   function initMap1() {
     var sourceInput = document.getElementById('source');

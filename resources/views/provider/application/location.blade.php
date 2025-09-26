@@ -13,7 +13,7 @@
             </ul>
         </div>
     @endif
-    
+
     @if(Session::has('flash_error'))
         <div class="alert alert-danger">
             <button type="button" class="close" data-dismiss="alert">×</button>
@@ -79,7 +79,7 @@
     function initMap() {
 
         var userLocation = new google.maps.LatLng(
-                @if(Auth::guard('provider')->user()->latitude) {{ Auth::guard('provider')->user()->latitude }} @else 11.8508117 @endif, 
+                @if(Auth::guard('provider')->user()->latitude) {{ Auth::guard('provider')->user()->latitude }} @else 11.8508117 @endif,
                 @if(Auth::guard('provider')->user()->longitude) {{ Auth::guard('provider')->user()->longitude }} @else 79.7854668 @endif
             );
 
@@ -166,16 +166,16 @@
         }
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places&callback=initMap" async defer></script>
 @endsection
 
 @section('styles')
 <style type="text/css">
     #map {
         height: 100%;
-        min-height: 400px; 
+        min-height: 400px;
     }
-    
+
     .controls {
         border: 1px solid transparent;
         border-radius: 2px 0 0 2px;

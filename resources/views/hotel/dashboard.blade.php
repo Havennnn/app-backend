@@ -4,8 +4,8 @@
 
 @section('styles')
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
-integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
   crossorigin="anonymous">
 <link rel="stylesheet" href="{{asset('main/ZebraDatetimePicker/css/default/zebra_datepicker.min.css')}}" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -49,7 +49,7 @@ integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeV
 
 .checkbox:checked + .label .ball {
     transform: translateX(24px);
-}    
+}
 
 /* Steps */
 .step {
@@ -120,7 +120,7 @@ body {
     background: none !important;
 }
 #container {
-    position: relative; 
+    position: relative;
     padding: 20px 40px;
     text-align: justify;
     height: 100%;
@@ -312,7 +312,7 @@ nav {
                 <label class="col-3"></label>
                 <div class="circle d-flex justify-content-center"></div>
             </div>
-            <div>                                   
+            <div>
                 <div class="form-group">
                     <label>Drop Location</label><span class="error-field d_address">required</span>
 		    <div class="input-group">
@@ -357,11 +357,11 @@ nav {
           <input type="hidden" name="stop1_longitude" id="stop1_longitude">
   	<input type="hidden" name="stop2_latitude" id="stop2_latitude">
           <input type="hidden" name="stop2_longitude" id="stop2_longitude">
-                        
+
         <div class="car-detail">
             @foreach($services as $service)
             <div class="car-radio">
-                <input type="radio" 
+                <input type="radio"
                     name="service_type"
                     value="{{$service->id}}"
                     id="service_{{$service->id}}"
@@ -414,13 +414,13 @@ nav {
             <div id="map" style="width: 100%; height: 450px;"></div>
         </div>
     </div>
-</div> 
+</div>
 @endsection
 
 @section('scripts')
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>-->
 <script type="text/javascript" src="{{ asset('asset/userpanel/js/map.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places&callback=initMap" async defer></script>
 <!-- datetime picker -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.4/css/bootstrap-datetimepicker.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
@@ -449,7 +449,7 @@ nav {
             $('#schedule_time_block').hide();
         }
     });
-</script> 
+</script>
 
 <script type="text/javascript">
     var current_latitude = parseFloat("{{ Auth::guard('hotel')->user()->latitude }}");
@@ -480,9 +480,9 @@ nav {
     function fail()
     {
         // Could not obtain location
-        console.log('unable to get your location');        
+        console.log('unable to get your location');
     }
-</script> 
+</script>
 
 <script type="text/javascript">
     function disableEnterKey(e)
@@ -516,7 +516,7 @@ nav {
     }
 });
 
-// 
+//
 $('.view-icon.list-btn').click( function(){
     $('.grid-view').hide();
     $('.list-view').fadeIn(300);
@@ -598,7 +598,7 @@ chk.addEventListener('change', () => {
             $('#schedule_time_block').show();
 		$('#pic1').attr('src', '/asset/img/caricon-trip.png');
 		$('#pic2').attr('src', '/asset/img/calendaricon-white.png');
-		
+
         } else {
             $('#schedule_time_block').hide();
 		$('#pic1').attr('src', '/asset/img/whitecar.png');
@@ -666,7 +666,7 @@ $("#morefield2").click(function(){
     });
 */    function fare_calculation(){
         var val = $('input[type="radio"][name="service_type"]:checked').val();
-        //alert(val); 
+        //alert(val);
         var s_latitude1 = $('#origin_latitude').val();
         var s_longitude1 = $('#origin_longitude').val();
         var d_latitude1 = $('#destination_latitude').val();

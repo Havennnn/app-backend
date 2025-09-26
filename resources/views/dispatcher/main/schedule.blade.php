@@ -6,7 +6,7 @@
 <div class="content-area py-1" id="trip-panel">
     <div class="container-fluid">
         <div class="box box-block bg-white">
-            <div class="row filterbox"> 
+            <div class="row filterbox">
 
             <a href="{{ route('dispatcher.dispatch.index') }}" style="margin-right: 1em;" class="btn btn-primary pull-right load">@lang('admin.triplist.dispatch_panel')</a>
             <div class="form-group col-md-2">
@@ -53,7 +53,7 @@
                     </tr>
                 </thead>
                 <tbody id="screen">
-    
+
                 </tbody>
                 <tfoot>
                     <tr>
@@ -75,7 +75,7 @@
                     </tr>
                 </tfoot>
             </table>
-    
+
       </div>
     </div>
 </div>
@@ -93,7 +93,7 @@
 
       </div>
       <div class="modal-footer">
-        
+
       </div>
     </div>
 </div>
@@ -111,7 +111,7 @@
 
       </div>
       <div class="modal-footer">
-        
+
       </div>
     </div>
 </div>
@@ -170,11 +170,11 @@
             <table class="table first">
                 <tr>
                     <td>@lang('admin.triplist.passenger_name')</td>
-                    <td id="name"></td>  
+                    <td id="name"></td>
                 </tr>
                 <tr>
                      <td>@lang('admin.triplist.driver_name')</td>
-                     <td id="drivername"></td> 
+                     <td id="drivername"></td>
                 </tr>
                 <tr>
                     <td>@lang('admin.triplist.pickup_time')</td>
@@ -197,10 +197,10 @@
             <div class="col-md-6">
             <table class="table second">
                 <tr>
-                    <td><b>@lang('admin.triplist.pickup_location'):</b> <br><span id="pickup"></span></td>  
+                    <td><b>@lang('admin.triplist.pickup_location'):</b> <br><span id="pickup"></span></td>
                 </tr>
                 <tr>
-                     <td><b>@lang('admin.triplist.drop_location'):</b><br><span id="drop"></span></td> 
+                     <td><b>@lang('admin.triplist.drop_location'):</b><br><span id="drop"></span></td>
                 </tr>
             </table>
             </div>
@@ -323,7 +323,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript" src="{{asset('main/vendor/toastr/toastr.min.js')}}"></script>
 <script type="text/javascript">
-    
+
     var maxdate = {!! json_encode( \Carbon\Carbon::today()->format('Y-m-d\TH:i') ) !!}
    /* $("#fromdate").flatpickr({
     enableTime: true,
@@ -371,7 +371,7 @@
         setInterval(function(){
             driver_movement();
         }, 30000);
-    });   
+    });
 </script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -383,12 +383,12 @@
         $(document).on('click','#dispatch', function() {
             $("#getcode").empty();
             var latitude = $(this).attr("data-latitude");
-            var longitude = $(this).attr("data-longitude"); 
+            var longitude = $(this).attr("data-longitude");
             var service = $(this).attr("data-service");
             var id = $(this).attr("data-id");
             var current =$(this).attr("data-current");
             if(current == 0){
-            $.get('providers', { 
+            $.get('providers', {
                 latitude: latitude,
                 longitude: longitude,
                 service_type: service,
@@ -407,10 +407,10 @@
             });
 
             }else{
-               $("#getcode").append("<tr><td>@lang('admin.triplist.request_already_assigned')</td></tr>"); 
+               $("#getcode").append("<tr><td>@lang('admin.triplist.request_already_assigned')</td></tr>");
             }
             $("#myModal").modal("toggle");
-        });   
+        });
 </script>
 <script>
 function updates(){
@@ -452,11 +452,11 @@ $(document).on('click','#showmap', function() {
                 }, function(result) {
                    console.log(result);
 
-        
-                  
+
+
         var map;
         var zoomLevel = 11;
-        
+
         map = new google.maps.Map(document.getElementById('map'));
 
         var marker = new google.maps.Marker({
@@ -501,7 +501,7 @@ $(document).on('click','#showmap', function() {
         bounds.extend(markerSecond.getPosition());
         map.fitBounds(bounds);
 
-        $('#name').text(result.user_name); 
+        $('#name').text(result.user_name);
         if(result.provider !=null){
             $('#drivername').text(result.provider['first_name']);
         }else{
@@ -514,16 +514,16 @@ $(document).on('click','#showmap', function() {
             $('#fare').text('{{ Setting::get('currency') }} '+ result.payment['total']);
          }else{
             $('#fare').text('null');
-        }   
+        }
         $('#pickup').text(result.s_address);
         $('#drop').text(result.d_address);
         });
-        
-        
-});    
+
+
+});
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 
 <script>
     $(document).on('click','#editmodal', function() {

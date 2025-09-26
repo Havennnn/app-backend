@@ -11,7 +11,7 @@ body {
     background: none !important;
 }
 #container {
-    position: relative; 
+    position: relative;
     padding: 20px 40px;
     text-align: justify;
     height: 100%;
@@ -116,7 +116,7 @@ nav {
             <label>Date & Time</label>
             <input type="text" class="form-control" id="schedule_time" name="schedule_time" placeholder="Schedule Time">
         </div>
-        
+
         <input type="hidden" name="s_latitude" id="origin_latitude">
         <input type="hidden" name="s_longitude" id="origin_longitude">
         <input type="hidden" name="d_latitude" id="destination_latitude">
@@ -126,12 +126,12 @@ nav {
 	<input type="hidden" name="stop1_latitude" id="stop1_latitude">
         <input type="hidden" name="stop1_longitude" id="stop1_longitude">
 	<input type="hidden" name="stop2_latitude" id="stop2_latitude">
-        <input type="hidden" name="stop2_longitude" id="stop2_longitude">	
+        <input type="hidden" name="stop2_longitude" id="stop2_longitude">
 
         <div class="car-detail">
             @foreach($services as $service)
             <div class="car-radio">
-                <input type="radio" 
+                <input type="radio"
                     name="service_type"
                     value="{{$service->id}}"
                     id="service_{{$service->id}}"
@@ -196,7 +196,7 @@ nav {
 @section('scripts')
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script> -->
 <script type="text/javascript" src="{{ asset('asset/userpanel/js/map.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places&callback=initMap" async defer></script>
 <!-- datetime picker -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.4/css/bootstrap-datetimepicker.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
@@ -232,7 +232,7 @@ nav {
             $('#schedule_time_block').hide();
         }
     });
-</script> 
+</script>
 
 <script type="text/javascript">
     var current_latitude = {{ $countrylatlng['lat'] }};
@@ -263,9 +263,9 @@ nav {
     function fail()
     {
         // Could not obtain location
-        console.log('unable to get your location');        
+        console.log('unable to get your location');
     }
-</script> 
+</script>
 
 
 <script type="text/javascript">
@@ -300,7 +300,7 @@ nav {
     }
 });
 
-// 
+//
 $('.view-icon.list-btn').click( function(){
     $('.grid-view').hide();
     $('.list-view').fadeIn(300);
@@ -356,7 +356,7 @@ $('.view-icon.grid-btn').click( function(){
 			toastr.options = {
      				positionClass: 'toast-top-right',
      				timeOut: 10000
-			};			
+			};
 			toastr.success(data.message);
 			setTimeout(function() {
 				location.reload();
@@ -368,7 +368,7 @@ $('.view-icon.grid-btn').click( function(){
      				timeOut: 10000
 			};
 			toastr.error(data.message);
-			
+
                        /* $('.alert-danger').show();
                         $("#message-error").html(data.message);*/
                     }
@@ -384,7 +384,7 @@ $('.view-icon.grid-btn').click( function(){
     });
 */    function fare_calculation(){
         var val = $('input[type="radio"][name="service_type"]:checked').val();
-        //alert(val); 
+        //alert(val);
         var s_latitude1 = $('#origin_latitude').val();
         var s_longitude1 = $('#origin_longitude').val();
         var d_latitude1 = $('#destination_latitude').val();

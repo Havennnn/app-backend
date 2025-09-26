@@ -12,7 +12,7 @@
                 <h4 class="page-title">Corporate</h4><a href="{{ route('admin.corporate.index') }}" class="btn btn-outline-warning btn-rounded w-min-sm m-l-0-75 waves-effect waves-light">List Corporate</a>
             </div>
             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                
+
                 <ol class="breadcrumb">
                     <li><a href="{{ route('admin.dashboard') }}">@lang('admin.dashboard')</a></li>
                     <li class="active">Add Corporate</li>
@@ -47,7 +47,7 @@
 					<div class="col-xs-8">
 						<input class="form-control" type="email" name="secondary_email" value="{{old('secondary_email')}}" id="secondary_email" placeholder="Secondary email">
 					</div>
-				</div>	
+				</div>
 				<div class="form-group row">
 					<label for="password" class="col-xs-12 col-form-label">@lang('admin.member.password')</label>
 					<div class="col-xs-8">
@@ -61,7 +61,7 @@
 						<input class="form-control" type="password" name="password_confirmation" id="password_confirmation" placeholder="@lang('admin.member.re_type')">
 					</div>
 				</div>
-				
+
 				<div class="form-group row">
 					<label for="picture" class="col-xs-12 col-form-label">Corporate Logo</label>
 					<div class="col-xs-8">
@@ -122,7 +122,7 @@
 
 @endsection
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 <script type="text/javascript">
   function initMap() {
 

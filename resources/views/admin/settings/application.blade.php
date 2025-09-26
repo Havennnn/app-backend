@@ -222,7 +222,7 @@
                     <label for="tax_percentage" class="col-xs-2 col-form-label">Web Map Key</label>
                     <div class="col-xs-8">
 			<div class="input-group" id="show_hide_password1">
-      				<input class="form-control" type="password" value="{{ Setting::get('map_key','AIzaSyBV1fZoyzTnxHOP5fbSiLvpe3oH7LZXc')  }}" name="map_key" id="map_key" placeholder="map_key" disabled>
+      				<input class="form-control" type="password" value="{{ Setting::get('map_key')  }}" name="map_key" id="map_key" placeholder="map_key" disabled>
       				<div class="input-group-addon">
         				<a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
       				</div>

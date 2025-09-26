@@ -24,14 +24,14 @@
             <form class="form-horizontal" action="{{route('admin.hotel.update', $hotel->id )}}" method="POST" enctype="multipart/form-data" role="form">
             	{{csrf_field()}}
             	<input type="hidden" name="_method" value="PATCH">
-				
+
 				<div class="form-group row">
 					<label for="name" class="col-xs-12 col-form-label">@lang('admin.member.full_name')</label>
 					<div class="col-xs-8">
 						<input class="form-control" type="text" value="{{ $hotel->name }}" name="name" required id="name" placeholder="@lang('admin.member.full_name')">
 					</div>
 				</div>
-		
+
 				<div class="form-group row">
 					<label for="email" class="col-xs-12 col-form-label">@lang('admin.member.email')</label>
 					<div class="col-xs-8">
@@ -103,7 +103,7 @@
 
 
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 <script type="text/javascript">
   function initMap() {
 
@@ -112,7 +112,7 @@
     var originLongitude = document.getElementById('longitude');
     var originAutocomplete = new google.maps.places.Autocomplete(
             originInput);
-    
+
     originAutocomplete.addListener('place_changed', function(event) {
         var place = originAutocomplete.getPlace();
         if (place.hasOwnProperty('place_id')) {

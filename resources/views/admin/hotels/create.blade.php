@@ -12,7 +12,7 @@
                 <h4 class="page-title">Hotel/Restaurant</h4><a href="{{ route('admin.hotel.index') }}" class="btn btn-outline-warning btn-rounded w-min-sm m-l-0-75 waves-effect waves-light">List Hotel/Restaurant</a>
             </div>
             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                
+
                 <ol class="breadcrumb">
                     <li><a href="{{ route('admin.dashboard') }}">@lang('admin.dashboard')</a></li>
                     <li class="active">Add Hotel/Restaurant</li>
@@ -30,7 +30,7 @@
 						<input class="form-control" type="text" value="{{ old('name') }}" name="name" required id="name" placeholder="@lang('admin.member.full_name')">
 					</div>
 				</div>
-		
+
 				<div class="form-group row">
 					<label for="email" class="col-xs-12 col-form-label">@lang('admin.member.email')</label>
 					<div class="col-xs-8">
@@ -83,7 +83,7 @@
 						<input class="form-control" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" value="{{ old('mobile') }}" name="mobile" required id="mobile" placeholder="@lang('admin.member.mobile')">
 					</div>
 				</div>
-				
+
 				<div class="form-group row">
 					<label for="zipcode" class="col-xs-12 col-form-label"></label>
 					<div class="col-xs-8">
@@ -99,7 +99,7 @@
 @endsection
 
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 <script type="text/javascript">
   function initMap() {
 
@@ -108,7 +108,7 @@
     var originLongitude = document.getElementById('longitude');
     var originAutocomplete = new google.maps.places.Autocomplete(
             originInput);
-    
+
     originAutocomplete.addListener('place_changed', function(event) {
         var place = originAutocomplete.getPlace();
         if (place.hasOwnProperty('place_id')) {

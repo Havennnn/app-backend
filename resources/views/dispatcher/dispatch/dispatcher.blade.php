@@ -683,7 +683,7 @@ button.Zebra_DatePicker_Icon {
                 <button type="button" class="close" data-dismiss="alert">�</button>
                 <span id="message-error"></span>
             </div>
-	
+
 
             @include('dispatcher.dispatch.create')
         </div>
@@ -789,7 +789,7 @@ button.Zebra_DatePicker_Icon {
                     </div>
                 </div>
               </form>
-            </div> 
+            </div>
         </div>
         <!--<div class="tab-pane" id="tab-4" role="tabpanel">
             <div class="alert alert-success">
@@ -813,7 +813,7 @@ button.Zebra_DatePicker_Icon {
    		<div class="has-search">
       			<span class="fa fa-search form-control-feedback"></span>
       			<input onkeyup="myFunction()" class="form-control" id="myInput" type="text"  style="z-index: 1000 !important;border-radius:0px;" placeholder="Search for drivers">
-    		</div> 
+    		</div>
 	</div>
 	<div id="dismiss">
     		<i class="fa fa-caret-left"></i>
@@ -836,7 +836,7 @@ button.Zebra_DatePicker_Icon {
 
 @include('dispatcher.dispatch.layout.partials.header')
 <div class="site-content">
-	
+
     	<div class="row bg-title">
           <!--<select class="form-control filter-box" id="choose_corporate" onchange="driver_updates()">
               <option value="">Select Company</option>
@@ -874,7 +874,7 @@ button.Zebra_DatePicker_Icon {
                 <option value="station_wagon">Station wagon</option>
                 <option value="booster_seat">Booster seat</option>
             </select>
-        
+
             <select class="form-control filter-box" id="driver_status" onchange="driver_updates()">
                 <option value="">All Status</option>
                 <option value="active">Active</option>
@@ -938,7 +938,7 @@ button.Zebra_DatePicker_Icon {
 
 @section('scripts')
 
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" ></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" ></script>
 <script type="text/javascript" src="{{asset('main/assets/js/markerwithlabel.js')}}"></script>
 <script type="text/javascript" src="{{asset('main/assets/js/infobox.js')}}"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -1061,7 +1061,7 @@ button.Zebra_DatePicker_Icon {
         }else{
             $('.first_name').hide();
         }
-    
+
         if($('#email').val() == ''){
             $('.email').show();
             require = 1;
@@ -1088,7 +1088,7 @@ button.Zebra_DatePicker_Icon {
             $('.d_address').hide();
         }
         if($("#provider_auto_assign").prop("checked") == false){
-		$("#provider_auto_assign").val('false');         
+		$("#provider_auto_assign").val('false');
         }else{
             $("#provider_auto_assign").val('true');
         }
@@ -1105,7 +1105,7 @@ button.Zebra_DatePicker_Icon {
             success: function(data) {
               if(data.success ==1){
 		$('#clear').trigger("click");
-                $('.alert-success').show().delay(5000).fadeOut(); 
+                $('.alert-success').show().delay(5000).fadeOut();
             		$("#message-success").append(data.message);
                             activeTab('tab-1');
             		$("#myModal .close").trigger("click");
@@ -1114,11 +1114,11 @@ button.Zebra_DatePicker_Icon {
                 $("#getcode").empty();
             		var latitude = $("#s_address").val();
             		var longitude = $("#d_address").val();
-			          var id = data.id; 
+			          var id = data.id;
             		var current = data.current;
                 // var service = $('#service_type').val();
 
-            			$.get('dispatcher/providers', { 
+            			$.get('dispatcher/providers', {
                 			//latitude: 11.02974830,
                 			//longitude: 76.94634310,
                 			service_type: service,
@@ -1163,7 +1163,7 @@ button.Zebra_DatePicker_Icon {
         }else{
             $('.corporate_id').hide();
         }
-        
+
         if($('#c_count').val() == ''){
             $('.c_count').show();
             require = 1;
@@ -1305,7 +1305,7 @@ button.Zebra_DatePicker_Icon {
               url: "/dispatcher/dispatch/driver-list",
               success: function(data)
               {
-                
+
                  $('.driver_list').html(data);
               }
             });
@@ -1361,7 +1361,7 @@ button.Zebra_DatePicker_Icon {
         setInterval(function(){
             driver_movement();
         }, 30000);
-    });   
+    });
 </script>
  --><script>
 
@@ -1393,7 +1393,7 @@ button.Zebra_DatePicker_Icon {
     var s_latitude, s_longitude;
     var d_latitude, d_longitude;
     var stop1_latitude, stop1_longitude;
-    var stop2_latitude, stop2_longitude;  
+    var stop2_latitude, stop2_longitude;
       var distance;
       var seconds;
 
@@ -1402,7 +1402,7 @@ button.Zebra_DatePicker_Icon {
     var interval;
     var worldinterval;
     var checker =0;
-    
+
     function worldMapInitialize() {
         clearInterval(interval);
         clearInterval(worldinterval);
@@ -1419,7 +1419,7 @@ button.Zebra_DatePicker_Icon {
         latitude = parseFloat("{{ Setting::get('address_lat') }}");
         longitude = parseFloat("{{ Setting::get('address_long') }}");
         zooming = parseInt("{{ Setting::get('zoom') }}");
-            
+
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: latitude, lng: longitude},
             zoom: zooming,
@@ -1433,7 +1433,7 @@ button.Zebra_DatePicker_Icon {
               zoomControlOptions: {
                 style: google.maps.ZoomControlStyle.SMALL,
                 position: google.maps.ControlPosition.BOTTOM_RIGHT
-              }                 
+              }
         });
         ajaxMapData();
       interval = setInterval(ajaxMapData, 5000);
@@ -1445,13 +1445,13 @@ button.Zebra_DatePicker_Icon {
         // mapelement.append(legend);
 
         // var div = document.createElement('div');
-        // div.className = ""; 
+        // div.className = "";
         // div.innerHTML = '<button class="btn-warning"><img src="' + mapIcons['person'] + '"> ' + '   Person ' + ' <input type="checkbox" name="filter_list" value="person"></button><button class="btn-success" style="margin-left:2px;"><img src="' + mapIcons['active'] + '"> ' + 'Acitve' + ' <input type="checkbox" name="filter_list" value="active">';
         // legend.appendChild(div);
 
-        
+
         // var div = document.createElement('div');
-        // div.style = "margin-top: 10px;"; 
+        // div.style = "margin-top: 10px;";
         // div.innerHTML = '<button class="btn-primary"><img src="' + mapIcons['riding'] + '"> ' + 'Riding' + ' <input type="checkbox" name="filter_list" value="riding"></button><button class="btn-danger" style="margin-left:2px;"><img src="' + mapIcons['offline'] + '"> ' + 'Offline' + ' <input type="checkbox" name="filter_list" value="offline"></button>';
         // legend.appendChild(div);
 
@@ -1483,12 +1483,12 @@ button.Zebra_DatePicker_Icon {
                     googleMarkers[i].setMap(null);
                 }
                 googleMarkers.length = 0;
-                
+
                 for (var i=0;i<infoDefault.length;i++) {
                     infoDefault[i].close();
                 }
                 infoDefault.length = 0;
-                
+
                 ajaxMarkers = data;
                 jQuery.each(ajaxMarkers, $.proxy(function(index, element) {
                     if(checker ==0 || checker ==element.id){
@@ -1514,7 +1514,7 @@ button.Zebra_DatePicker_Icon {
 
                     mapMarkers[element.id] = marker;
                     googleMarkers.push(marker);
-                    
+
                     google.maps.event.addListener(marker, 'click', function() {
                         checker = marker.markerid;
                         for (var i=0;i<infoWindows.length;i++) {
@@ -1561,7 +1561,7 @@ button.Zebra_DatePicker_Icon {
              maxWidth: 0,
              pixelOffset: new google.maps.Size(-143, -130),
              zIndex: null,
-             boxStyle: { 
+             boxStyle: {
               opacity: 0.75,
               width: "280px"
              },
@@ -1574,8 +1574,8 @@ button.Zebra_DatePicker_Icon {
           //map.setZoom(18);
           var ib = new InfoBox(myOptions);
           ib.open(map, marker);
-          infoWindows.push(ib); 
-          
+          infoWindows.push(ib);
+
         } else {
           // window.alert('Geocoder failed due to: ' + status);
         }
@@ -1599,7 +1599,7 @@ button.Zebra_DatePicker_Icon {
 
     //     d_latitude = document.getElementById('d_latitude');
     //     d_longitude = document.getElementById('d_longitude');
-        
+
     //     distance = document.getElementById('distance');
 
     //     var autocomplete_source = new google.maps.places.Autocomplete(s_input);
@@ -1622,7 +1622,7 @@ button.Zebra_DatePicker_Icon {
 
     //     /*autocomplete_destination.setFields(
     //         ['address_components','geometry','icon','name','formatted_address']);*/
-        
+
     //     /*autocomplete_destination.setComponentRestrictions(
     //         {'country': ['se','in']});*/
 
@@ -1690,7 +1690,7 @@ button.Zebra_DatePicker_Icon {
     //         latitude = parseFloat("{{ Auth::guard('dispatcher')->user()->dispatch_lat }}");
     //         longitude = parseFloat("{{ Auth::guard('dispatcher')->user()->dispatch_long }}");
     //         zooming = parseInt("{{ Auth::guard('dispatcher')->user()->dispatch_zoom }}");
-                
+
     //         map = new google.maps.Map(document.getElementById('map'), {
     //             center: {lat: latitude, lng: longitude},
     //             zoom: zooming,
@@ -1705,8 +1705,8 @@ button.Zebra_DatePicker_Icon {
     //                 style: google.maps.ZoomControlStyle.SMALL,
     //                 position: google.maps.ControlPosition.BOTTOM_CENTER
     //               }
-                  
-                     
+
+
     //         });
 
     //         var marker = new google.maps.Marker({
@@ -1723,7 +1723,7 @@ button.Zebra_DatePicker_Icon {
 
     //         directionsDisplay.setMap(null);
     //         directionsDisplay.setMap(map);
-             
+
     //         directionsService.route({
     //             origin: source,
     //             destination: destination,
@@ -1758,7 +1758,7 @@ button.Zebra_DatePicker_Icon {
 
         d_latitude = document.getElementById('d_latitude');
         d_longitude = document.getElementById('d_longitude');
-        
+
          s1_latitude = document.getElementById('stop1_latitude');
          s1_longitude = document.getElementById('stop1_longitude');
 
@@ -1774,7 +1774,7 @@ button.Zebra_DatePicker_Icon {
         // latitude = 42.88668185451463;
         // longitude = -76.17038047904786;
         // zooming = 10;
-            
+
             latitude = parseFloat("{{ Auth::guard('dispatcher')->user()->dispatch_lat }}");
             longitude = parseFloat("{{ Auth::guard('dispatcher')->user()->dispatch_long }}");
             zooming = parseInt("{{ Auth::guard('dispatcher')->user()->dispatch_zoom }}");
@@ -2270,7 +2270,7 @@ button.Zebra_DatePicker_Icon {
 
         cd_latitude = document.getElementById('cd_latitude');
         cd_longitude = document.getElementById('cd_longitude');
-        
+
         distance = document.getElementById('distance');
         seconds = document.getElementById('seconds');
 
@@ -2283,10 +2283,10 @@ button.Zebra_DatePicker_Icon {
             {'country': ['se','in']});
 
         var autocomplete_destination = new google.maps.places.Autocomplete(corporatedes_input);
-    
+
         /*autocomplete_destination.setFields(
             ['address_components','geometry','icon','name','formatted_address']);*/
-        
+
         autocomplete_destination.setComponentRestrictions(
             {'country': ['se','in']});
 
@@ -2324,7 +2324,7 @@ button.Zebra_DatePicker_Icon {
     $('<div class="item"><img src="https://dev.unicotaxi.com/uploads/2cc62009f584748c531d07f8753dcd809e5cc0d4.png" style="width: 70px;margin-left: 46px;"><span style="float: revert;padding: 11px;font-weight:bold;font-size:17px;">Sedan</span><span style="float: inherit;padding: 17px;"><i class="fa fa-user" aria-hidden="true"> 3</i></span><strong><span style="float: inherit;padding: 85px;font-size=24">134</span></strong><div class="carousel-caption"></div>   </div>').appendTo('.carousel-inner');
     $('<li data-target="#carousel-example-generic" data-slide-to=" "></li>').appendTo('.carousel-indicators');
 
-  
+
   $('.item').first().addClass('active');
   $('.carousel-indicators > li').first().addClass('active');
   $('#carousel-example-generic').carousel();
@@ -2383,11 +2383,11 @@ button.Zebra_DatePicker_Icon {
 
 </script>
 <script>
-$('#myModal').modal('show'); 
+$('#myModal').modal('show');
 $("div").removeClass("modal-backdrop");
 $(document).ready(function () {
   $("#add_trip").click(function () {
-    $('#myModal').modal('show'); 
+    $('#myModal').modal('show');
     $("div").removeClass("modal-backdrop");
   });
   $('.stop1').hide();
@@ -2425,7 +2425,7 @@ $("#morefield3").click(function(){
 /*var totalItems = $('#carousel-example-generic .carousel-item').length;
 var currentIndex1 = $('#carousel-example-generic .carousel-item.active').index() + 1;*/
 var currentIndex = $('#carousel-example-generic .carousel-item.active #service-id').html();
-$("#service_type").val(currentIndex); 
+$("#service_type").val(currentIndex);
 $(".next").click(function(){
 var currentIndex = $('#carousel-example-generic .carousel-item.active').next().html();
 if(currentIndex == undefined){
@@ -2433,7 +2433,7 @@ if(currentIndex == undefined){
 }
 var v1 = $(currentIndex);
 var v2 = v1.find('#service-id').html();
-$("#service_type").val(v2); 
+$("#service_type").val(v2);
 
               var val = $('#service_type').val();
               var s_latitude1 = $('#s_latitude').val();
@@ -2471,14 +2471,14 @@ if(currentIndex == undefined){
 }
 var v1 = $(currentIndex);
 var v2 = v1.find('#service-id').html();
-$("#service_type").val(v2); 
+$("#service_type").val(v2);
 
               var val = $('#service_type').val();
               var s_latitude1 = $('#s_latitude').val();
               var s_longitude1 = $('#s_longitude').val();
               var d_latitude1 = $('#d_latitude').val();
               var d_longitude1 = $('#d_longitude').val();
-             
+
 
               if(s_latitude1 !='' && s_latitude1 !='' && val !=''){
                   $.ajax({
@@ -2501,7 +2501,7 @@ $("#service_type").val(v2);
                   });
               }
 });
-            
+
 });
 </script>
 <script type="text/javascript">
@@ -2516,7 +2516,7 @@ chk.addEventListener('change', () => {
             $('#schedule_time_block').show();
 		$('#pic1').attr('src', '/asset/img/caricon-trip.png');
 		$('#pic2').attr('src', '/asset/img/calendaricon-white.png');
-		
+
         } else {
             $('#schedule_time_block').hide();
 		$('#pic1').attr('src', '/asset/img/whitecar.png');
@@ -2570,12 +2570,12 @@ $(document).ready(function() {
   $('#driverallstatus').hover(function() {
     clearTimeout(timer);
     $('#driverallstatus').addClass('open');
-    
+
   }, function() {
      timer = setTimeout(function() {
       $('#driverallstatus').removeClass("open");
     }, 200);
-    
+
   });
 });
 </script>
@@ -2593,7 +2593,7 @@ $(document).ready(function() {
       		var a = $(this).find('span').text();
       		var count = $(".notification").text();
       		var b = parseInt($(".notification").text());
-      		var c = b-1; 
+      		var c = b-1;
       		$(this).remove();
 		$.ajax({
             		type: "GET",
@@ -2611,7 +2611,7 @@ $(document).ready(function() {
               		}
             		}
       		});
-      
+
     	});
 	$('.clear-note').click(function(){
    	  $.ajax({

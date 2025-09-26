@@ -512,7 +512,7 @@
         setInterval(function(){
             driver_movement();
         }, 30000);
-    });   
+    });
 </script>
  -->
 <script type="text/javascript">
@@ -555,7 +555,7 @@
         });
 
         // }else{
-        //    $("#getcode").append("<tr><td>@lang('admin.triplist.request_already_assigned')</td></tr>"); 
+        //    $("#getcode").append("<tr><td>@lang('admin.triplist.request_already_assigned')</td></tr>");
         // }
         $("#myModal").modal("toggle");
     });
@@ -740,7 +740,7 @@
     });
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyC7urojphmUg5qlseNH99Rojwn9Y-Amc0w') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 
 <script>
     $(document).on('click', '#editmodal', function() {

@@ -15,7 +15,7 @@
                 <h4 class="page-title">Demos</h4><a href="{{ route('admin.demo.index') }}" class="btn btn-outline-warning btn-rounded w-min-sm m-l-0-75 waves-effect waves-light">List Demo</a>
             </div>
             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                
+
                 <ol class="breadcrumb">
                     <li><a href="{{ route('admin.dashboard') }}">@lang('admin.dashboard')</a></li>
                     <li class="active">Add Demo</li>
@@ -59,7 +59,7 @@
 						<select name="country_id" id="country_id" class="form-control" data-plugin="select2">
 							<option value="">Select Country</option>
 							@foreach($countries as $country)
-								<option value="{{ $country->countryid }}" @if (old('country_id') == $country->countryid)  
+								<option value="{{ $country->countryid }}" @if (old('country_id') == $country->countryid)
         selected  @endif>{{ $country->name }}</option>
 							@endforeach
 						</select>
@@ -103,7 +103,7 @@
 							<option value="12">12</option>
  -->						</select>
 					</div>
-				</div> 
+				</div>
 				<div class="form-group row">
 					<label for="timezoner" class="col-xs-12 col-form-label">Time Zone</label>
 					<div class="col-xs-8">
@@ -130,7 +130,7 @@
 @endsection
 
 @section('scripts')
-<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key', 'AIzaSyA30-YQUNKSLkw69WCOzJBMHDDwH_X_QXY') }}&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ Setting::get('map_key') }}&libraries=places" async defer></script>
 <script type="text/javascript" src="{{asset('main/vendor/select2/dist/js/select2.min.js')}}"></script>
 
 <script type="text/javascript">
@@ -162,7 +162,7 @@ input.addEventListener('input', function()
   }
 
 });
-       $('[data-plugin="select2"]').select2($(this).attr('data-options'));   
+       $('[data-plugin="select2"]').select2($(this).attr('data-options'));
 
 // document.getElementById('txtbox1').addEventListener('input',function(e){
 //  console.log('typing');
